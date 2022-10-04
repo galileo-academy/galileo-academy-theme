@@ -1,0 +1,52 @@
+// font families
+$primary-font: 'Poppins', sans-serif;
+
+// color variables
+$yellow: #FFBE55;
+$yellow-hover: #F8A928;
+
+$blue: #1579C7;
+$blue-hover: #1562A3;
+
+$black: #000;
+$dark-grey: #17181B;
+$medium-grey: #222429;
+$light-grey: #e2e2e2;
+$white-grey: #f2f2f2;
+$white: #fff;
+
+// Media Queries
+$xs: 375px;
+$sm: 768px;
+$md: 1024px;
+$lg: 1200px;
+
+// SCSS
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+margin: 0;
+padding: 0;
+}
+
+body, html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: $primary-font;
+}
+
+a {
+    text-decoration: none;
+}

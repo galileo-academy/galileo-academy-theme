@@ -1,0 +1,30 @@
+.navbar-wrapper {
+    position: relative;
+
+    &__top {
+        padding: 25px 0 10px 0;
+        text-align: center;
+    }
+
+    &__bottom {
+        padding: 20px 100px;
+        background-color: $yellow;
+
+        #menu-header-menu {
+            display: flex;
+            list-style-type: none;
+            gap: 50px;
+
+            li {
+                display: inline;
+                gap: 50px;
+
+                a {
+                    color: $dark-grey;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
