@@ -1,6 +1,3 @@
-// font families
-$primary-font: 'Poppins', sans-serif;
-
 // color variables
 $yellow: #FFBE55;
 $yellow-hover: #F8A928;
@@ -15,13 +12,53 @@ $light-grey: #e2e2e2;
 $white-grey: #f2f2f2;
 $white: #fff;
 
+// font families
+$primary-font: 'Poppins', sans-serif;
+
+// font sizes
+h1 {
+    font-size: 42px;
+    line-height: 130%;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 130%;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 800;
+}
+
+p {
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 300;
+}
+
+.p-small {
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 600;
+}
+
+.quote {
+    font-size: 32px;
+    line-height: 150%;
+    font-weight: 200;
+}
+
 // Media Queries
 $xs: 375px;
 $sm: 768px;
 $md: 1024px;
 $lg: 1200px;
 
-// SCSS
+// Global SCSS
 html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
