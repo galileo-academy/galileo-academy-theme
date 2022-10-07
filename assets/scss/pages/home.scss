@@ -1,0 +1,34 @@
+body.page-template.home {
+
+    .quotes {
+        z-index: 1;
+        position: relative;
+        margin-top: 400px;
+        padding: 0 0 250px 0;
+        background-color: $medium-grey;
+        color: $white;
+
+        &::before {
+            z-index: -1;
+            position: absolute;
+            content: "";
+            height: 400px;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: -150px;
+            transform: skewY(7deg);
+            background-color: $medium-grey;
+        }
+
+        &__inner {
+            margin: auto;
+            max-width: 1200px;
+
+            .quote-person {
+                margin: 20px 0 80px;
+            }
+        }
+    }
+
+}

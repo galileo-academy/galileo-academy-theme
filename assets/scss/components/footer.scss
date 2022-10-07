@@ -1,9 +1,12 @@
 .footer-wrapper {
-    background: $white;
+    padding: 55px 0;
+    z-index: 1;
+    background-color: $white;
 
     &__inner {
+        position: relative;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 40% 60%;
         margin: auto;
         max-width: 1200px;
 
@@ -15,10 +18,13 @@
         }
 
         &--right {
+            z-index: 1;
             display: flex;
-            align-items: center;
+            flex-flow: column;
+            align-items: flex-start;
             justify-content: start;
             padding: 20px;
+            gap: 15px;
         }
     }
 }
