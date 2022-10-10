@@ -133,25 +133,21 @@ a {
             font-weight: 600; }
 
 body.page-template.home .quotes {
-  z-index: 1;
   position: relative;
-  margin-top: 400px;
-  padding: 0 0 250px 0;
-  background-color: #222429;
+  padding: 250px 0 250px 0;
   color: #fff; }
   body.page-template.home .quotes::before {
-    z-index: -1;
+    content: '';
     position: absolute;
-    content: "";
-    height: 400px;
-    width: 100%;
-    left: 0;
+    top: 0;
     right: 0;
-    top: -150px;
-    transform: skewY(7deg);
-    background-color: #222429; }
+    left: 0;
+    bottom: 0;
+    background-color: #222429;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%); }
   body.page-template.home .quotes__inner {
+    position: relative;
     margin: auto;
     max-width: 1200px; }
     body.page-template.home .quotes__inner .quote-person {
-      margin: 20px 0 80px; }
+      margin: 20px 0 65px; }

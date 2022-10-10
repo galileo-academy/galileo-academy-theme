@@ -2,12 +2,19 @@
 <?php get_header(); ?>
 
 <div class="quotes">
+    <?php
+    if( have_rows('beoordelingen') ):
+    while ( have_rows('beoordelingen') ) : the_row();
+    ?>
     <div class="quotes__inner">
-        <p class="quote">“Bij Galileo Academy worden werknemers met een afstand tot de arbeidsmarkt mooie ontwikkelkansen én een baan geboden.<br/><br/> Mijn ervaring met Galileo is goed. De werknemers zijn erg betrokken en zeer gemotiveerd. Zij zijn klantgericht en de communicatie verloopt op een prettige manier. Het is fijn te weten dat Robin altijd stand-by staat en, indien nodig, zelf inspringt. Ik kan de samenwerking met Galileo Academy van harte aanbevelen!.”</p>
-        <p class="p-small quote-person">Marieke van der Poel-Derks<br/> EIGENAAR | BLUE OFFICE</p>
+        <p class="quote">“<?php the_sub_field('content', false) ?>”</p>
+        <p class="p-small quote-person"><?php the_sub_field('naam') ?><br/> <?php the_sub_field('functie') ?> | <?php the_sub_field('bedrijf') ?></p>
         <a href="/" class="button yellow">Meer beoordelingen lezen</a>
     </div>
-
+    <?php 
+    endwhile;
+    endif;
+    ?>
 </div>
 
 <?php get_footer(); ?>
