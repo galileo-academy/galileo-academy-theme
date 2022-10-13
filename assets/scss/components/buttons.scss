@@ -28,9 +28,23 @@
 .yellow {
     background-color: $yellow;
     color: $dark-grey;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: $yellow-hover;
+    }
 }
 
 .blue {
     background-color: $blue;
     color: $white;
+
+    &:hover {
+        background-color: $blue-hover;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $blue-hover;
+        }
+    }
 }

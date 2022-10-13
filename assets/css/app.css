@@ -79,11 +79,19 @@ a {
 
 .yellow {
   background-color: #FFBE55;
-  color: #17181B; }
+  color: #17181B;
+  transition: background-color 0.2s ease-in-out; }
+  .yellow:hover {
+    background-color: #F8A928; }
 
 .blue {
   background-color: #1579C7;
   color: #fff; }
+  .blue:hover {
+    background-color: #1562A3;
+    transition: background-color 0.2s ease-in-out; }
+    .blue:hover:hover {
+      background-color: #1562A3; }
 
 .footer-wrapper {
   padding: 55px 0;
@@ -132,9 +140,66 @@ a {
             text-transform: uppercase;
             font-weight: 600; }
 
+body.page-template.home .diensten {
+  position: relative;
+  padding: 100px 0 300px; }
+  body.page-template.home .diensten::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #FFBE55;
+    clip-path: polygon(0 0%, 100% 0%, 100% 80%, 0% 100%); }
+  body.page-template.home .diensten__inner {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 50px;
+    z-index: 2;
+    margin: auto;
+    max-width: 1200px; }
+    body.page-template.home .diensten__inner--diensten {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 100px; }
+      body.page-template.home .diensten__inner--diensten .dienst {
+        padding: 0 50px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+        gap: 18px; }
+        body.page-template.home .diensten__inner--diensten .dienst .image-box {
+          background-color: white;
+          border-radius: 100px;
+          padding: 50px; }
+
+body.page-template.home .uniek {
+  z-index: 2;
+  position: relative; }
+  body.page-template.home .uniek__inner {
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+    max-width: 1200px; }
+    body.page-template.home .uniek__inner--left {
+      position: relative; }
+      body.page-template.home .uniek__inner--left img {
+        position: absolute;
+        left: -200px;
+        bottom: -250px; }
+    body.page-template.home .uniek__inner--right {
+      display: flex;
+      flex-flow: column;
+      gap: 20px; }
+
 body.page-template.home .quotes {
   position: relative;
-  padding: 250px 0 250px 0;
+  padding: 250px 0;
   color: #fff; }
   body.page-template.home .quotes::before {
     content: '';

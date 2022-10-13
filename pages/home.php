@@ -1,6 +1,50 @@
 <?php /* Template Name: Home Template */ ?>
 <?php get_header(); ?>
 
+<div class="diensten">
+    <div class="diensten__inner">
+        <div class="diensten__inner--heading">
+            <h1>Onze Diensten</h1>
+        </div>
+
+        <div class="diensten__inner--diensten">
+            <?php
+            if( have_rows('dienst') ):
+            while ( have_rows('dienst') ) : the_row();
+            ?>
+            <div class="dienst">
+                <div class="image-box">
+                    <img src="<?php the_sub_field('dienst_afbeelding') ?>" alt="">
+                </div>
+                <div class="content-box">
+                    <h2><?php the_sub_field('dienst_naam') ?></h2>
+                    <p><?php the_sub_field('dienst_content') ?></p>
+                </div>
+            </div>
+            <?php 
+            endwhile;
+            endif;
+            ?>
+        </div>
+
+        <div class="diensten__inner--meer">
+            <a class="button blue" href="">Meer over onze diensten</a>
+        </div>
+    </div>
+</div>
+
+<div class="uniek">
+    <div class="uniek__inner">
+        <div class="uniek__inner--left">
+            <img src="<?php the_field('uniek_afbeelding') ?>" />
+        </div>
+        <div class="uniek__inner--right">
+            <h1>Wat ons uniek maakt</h1>
+            <p>Galileo Academy is een sociale onderneming, gecertificeerd op de hoogste trede van PSO (Prestatieladder Sociaal Ondernemen). Wij ontwikkelen mensen ‘met een afstand tot de arbeidsmarkt’ door commerciële opdrachten uit te voeren op het vlak van ontwerp, ontwikkeling en beheer van websites, webshops en mobiele apps. Wij maken Wordpress websites, Woocommerce webshops en IOS en Android apps.<br/><br/> Door uw vraag op dit vlak bij ons neer te leggen kunnen wij mensen met een afstand tot de arbeidsmarkt opleiden, werkervaring laten op doen en sociale en werknemersvaardigheden bij brengen en vervolgens in dienst nemen, dan wel naar een baan toe leiden bij een andere werkgever.</p>
+        </div>
+    </div>
+</div>
+
 <div class="quotes">
     <?php
     if( have_rows('beoordelingen') ):

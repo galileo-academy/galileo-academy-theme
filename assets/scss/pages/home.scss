@@ -1,8 +1,85 @@
 body.page-template.home {
 
+    .diensten {
+        position: relative;
+        padding: 100px 0 300px;
+
+        &::before {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: $yellow;
+            clip-path: polygon(0 0%, 100% 0%, 100% 80%, 0% 100%);
+        }
+
+        &__inner {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            gap: 50px;
+            z-index: 2;
+            margin: auto;
+            max-width: 1200px;
+
+            &--diensten {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 100px;
+
+                .dienst {
+                    padding: 0 50px;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 18px;
+
+                    .image-box {
+                        background-color: white;
+                        border-radius: 100px;
+                        padding: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    .uniek {
+        z-index: 2;
+        position: relative;
+
+        &__inner {
+            padding: 100px 0;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            margin: auto;
+            max-width: 1200px;
+
+            &--left {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    left: -200px;
+                    bottom: -250px;
+                }
+            }
+
+            &--right {
+                display: flex;
+                flex-flow: column;
+                gap: 20px;
+            }
+        }
+    }
+
     .quotes {
         position: relative;
-        padding: 250px 0 250px 0;
+        padding: 250px 0;
         color: $white;
 
         &::before {
