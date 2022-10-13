@@ -1,8 +1,62 @@
 body.page-template.home {
 
-    .diensten {
+    .hero {
+        margin-top: -100px;
         position: relative;
-        padding: 100px 0 300px;
+
+        &__inner {
+            display: grid;
+            margin: auto;
+            max-width: 1200px;
+            grid-template-columns: 50% 50%;
+
+            &--left {
+                position: relative;
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                justify-content: center;
+            }
+
+            &--right {
+                position: relative;
+
+                img {
+                    z-index: 10;
+                    position: relative;
+                    bottom: -200px;
+                }
+            }
+        }
+    }
+
+    .diensten {
+        z-index: 1;
+        position: relative;
+        padding: 0px 0 300px;
+        overflow: visible;
+
+        .intro {
+            z-index: 2;
+            color: $white;
+            padding: 250px 0 300px;
+            background-color: $medium-grey;
+            clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+
+            &__inner {
+                position: relative;
+                max-width: 1200px;
+                margin: auto;
+
+
+                &--content {
+
+                    p {
+                        max-width: 600px;
+                    }
+                }
+            }
+        }
 
         &::before {
             z-index: -1;
@@ -13,7 +67,8 @@ body.page-template.home {
             left: 0;
             bottom: 0;
             background-color: $yellow;
-            clip-path: polygon(0 0%, 100% 0%, 100% 80%, 0% 100%);
+            clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+
         }
 
         &__inner {

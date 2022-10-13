@@ -1,7 +1,27 @@
 <?php /* Template Name: Home Template */ ?>
 <?php get_header(); ?>
 
+<div class="hero">
+    <div class="hero__inner">
+        <div class="hero__inner--left">
+            <p class="quote"><?php the_field('hero_heading') ?></p>
+            <a class="cta blue intro-cta" href="/contact">Gratis Advies</a>
+        </div>
+        <div class="hero__inner--right">
+            <img src="<?php the_field("hero_afbeelding") ?>" alt="">
+        </div>
+    </div>
+</div>
+
 <div class="diensten">
+    <div class="intro">
+        <div class="intro__inner">
+            <div class="intro__inner--content">
+                <p>Wij zorgen voor uw digitale aanwezigheid door middel van een Wordpress website, een Woocommerce webshop of een mobiele app.  Wij dekken het hele traject af van het maken van een logo en een huisstijl, tot aan het design, de bouw en uiteindelijk de hosting en het beheer van uw website of app. We kunnen  echter ook onderdelen van het proces oppakken, zoals het optimaliseren van uw bestaande website.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="diensten__inner">
         <div class="diensten__inner--heading">
             <h1>Onze Diensten</h1>

@@ -58,6 +58,12 @@ a {
   top: -150px;
   right: 0; }
 
+.intro-cta {
+  z-index: 20;
+  position: absolute;
+  bottom: -150px;
+  left: 0; }
+
 .cta {
   display: flex;
   align-items: center;
@@ -140,9 +146,44 @@ a {
             text-transform: uppercase;
             font-weight: 600; }
 
+body.page-template.home .hero {
+  margin-top: -100px;
+  position: relative; }
+  body.page-template.home .hero__inner {
+    display: grid;
+    margin: auto;
+    max-width: 1200px;
+    grid-template-columns: 50% 50%; }
+    body.page-template.home .hero__inner--left {
+      position: relative;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      justify-content: center; }
+    body.page-template.home .hero__inner--right {
+      position: relative; }
+      body.page-template.home .hero__inner--right img {
+        z-index: 10;
+        position: relative;
+        bottom: -200px; }
+
 body.page-template.home .diensten {
+  z-index: 1;
   position: relative;
-  padding: 100px 0 300px; }
+  padding: 0px 0 300px;
+  overflow: visible; }
+  body.page-template.home .diensten .intro {
+    z-index: 2;
+    color: #fff;
+    padding: 250px 0 300px;
+    background-color: #222429;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%); }
+    body.page-template.home .diensten .intro__inner {
+      position: relative;
+      max-width: 1200px;
+      margin: auto; }
+      body.page-template.home .diensten .intro__inner--content p {
+        max-width: 600px; }
   body.page-template.home .diensten::before {
     z-index: -1;
     content: '';
@@ -152,7 +193,7 @@ body.page-template.home .diensten {
     left: 0;
     bottom: 0;
     background-color: #FFBE55;
-    clip-path: polygon(0 0%, 100% 0%, 100% 80%, 0% 100%); }
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%); }
   body.page-template.home .diensten__inner {
     display: flex;
     flex-flow: column;
