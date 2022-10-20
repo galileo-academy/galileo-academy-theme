@@ -1,3 +1,8 @@
+.display {
+  font-size: 56px;
+  line-height: 150%;
+  font-weight: 800; }
+
 h1 {
   font-size: 42px;
   line-height: 130%;
@@ -53,27 +58,47 @@ a {
   color: #17181B;
   text-decoration: none; }
 
+.header {
+  color: #FFBE55;
+  border: 2px solid #FFBE55;
+  background-color: #fff;
+  position: absolute;
+  top: -85px;
+  left: -200px;
+  width: 200px;
+  height: 200px; }
+
 .footer {
   position: absolute;
-  top: -150px;
-  right: 0; }
+  top: -160px;
+  right: 0;
+  width: 200px;
+  height: 200px; }
 
 .intro-cta {
   z-index: 20;
   position: absolute;
   bottom: -150px;
-  left: 0; }
+  left: 0;
+  width: 240px;
+  height: 240px; }
+
+.diensten-cta {
+  z-index: 20;
+  position: absolute;
+  left: 0;
+  width: 240px;
+  height: 240px; }
 
 .cta {
+  padding: 20px;
   display: flex;
   align-items: center;
   text-align: center;
   font-size: 32px;
   border-radius: 500px;
   font-weight: 500;
-  text-transform: uppercase;
-  width: 200px;
-  height: 200px; }
+  text-transform: uppercase; }
 
 .button {
   text-transform: uppercase;
@@ -124,6 +149,7 @@ a {
       gap: 15px; }
 
 .navbar-wrapper {
+  z-index: 20;
   position: relative; }
   .navbar-wrapper__top {
     padding: 25px 0 10px 0;
@@ -132,8 +158,11 @@ a {
     padding: 20px 100px;
     background-color: #FFBE55; }
     .navbar-wrapper__bottom--inner {
+      position: relative;
+      display: flex;
       margin: auto;
-      max-width: 1200px; }
+      max-width: 1200px;
+      justify-content: space-between; }
       .navbar-wrapper__bottom--inner #menu-header-menu {
         display: flex;
         list-style-type: none;
@@ -145,6 +174,66 @@ a {
             color: #17181B;
             text-transform: uppercase;
             font-weight: 600; }
+      .navbar-wrapper__bottom--inner .header-cta {
+        position: relative; }
+
+body.page-template-diensten .hero {
+  padding: 100px 0 0;
+  position: relative; }
+  body.page-template-diensten .hero__inner {
+    margin: auto;
+    max-width: 1200px; }
+    body.page-template-diensten .hero__inner--content {
+      position: relative;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center; }
+      body.page-template-diensten .hero__inner--content img {
+        z-index: 10;
+        position: relative; }
+
+body.page-template-diensten .logo-en-huisstijl {
+  margin-top: -260px;
+  padding: 350px 0;
+  position: relative;
+  color: #fff; }
+  body.page-template-diensten .logo-en-huisstijl::after {
+    z-index: -1;
+    content: '';
+    background-color: #222429;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%); }
+  body.page-template-diensten .logo-en-huisstijl__inner {
+    display: grid;
+    margin: auto;
+    max-width: 1200px;
+    grid-template-columns: 50% 50%; }
+    body.page-template-diensten .logo-en-huisstijl__inner--right p {
+      margin: 20px 0 60px; }
+    body.page-template-diensten .logo-en-huisstijl__inner--left {
+      display: flex;
+      justify-content: center; }
+
+body.page-template-diensten .websites {
+  padding: 50px 0;
+  position: relative; }
+  body.page-template-diensten .websites__inner {
+    display: grid;
+    margin: auto;
+    max-width: 1200px;
+    grid-template-columns: 50% 50%; }
+    body.page-template-diensten .websites__inner--left {
+      position: relative; }
+      body.page-template-diensten .websites__inner--left p {
+        margin: 20px 0 60px; }
+    body.page-template-diensten .websites__inner--right {
+      display: flex;
+      justify-content: center; }
 
 body.page-template.home .hero {
   margin-top: -100px;
@@ -175,7 +264,7 @@ body.page-template.home .diensten {
   body.page-template.home .diensten .intro {
     z-index: 2;
     color: #fff;
-    padding: 250px 0 300px;
+    padding: 200px 0 250px;
     background-color: #222429;
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%); }
     body.page-template.home .diensten .intro__inner {

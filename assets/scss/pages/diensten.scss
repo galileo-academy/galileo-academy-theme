@@ -1,0 +1,90 @@
+body.page-template-diensten {
+
+    .hero {
+        padding: 100px 0 0;
+        position: relative;
+
+        &__inner {
+            margin: auto;
+            max-width: 1200px;
+
+            &--content {
+                position: relative;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    z-index: 10;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .logo-en-huisstijl {
+        margin-top: -260px;
+        padding: 350px 0;
+        position: relative;
+        color: $white;
+
+        &::after {
+            z-index: -1;
+            content: '';
+            background-color: $medium-grey;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+
+        }
+
+        &__inner {
+            display: grid;
+            margin: auto;
+            max-width: 1200px;
+            grid-template-columns: 50% 50%;
+
+            &--right {
+
+                p {
+                    margin: 20px 0 60px;
+                }
+
+            }
+
+            &--left {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    .websites {
+        padding: 50px 0;
+        position: relative;
+
+        &__inner {
+            display: grid;
+            margin: auto;
+            max-width: 1200px;
+            grid-template-columns: 50% 50%;
+
+            &--left {
+                position: relative;
+
+                p {
+                    margin: 20px 0 60px;
+                }
+            }
+
+            &--right {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
