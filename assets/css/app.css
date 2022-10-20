@@ -101,6 +101,7 @@ a {
   text-transform: uppercase; }
 
 .button {
+  display: inline-block;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 600;
@@ -155,7 +156,7 @@ a {
     padding: 25px 0 10px 0;
     text-align: center; }
   .navbar-wrapper__bottom {
-    padding: 20px 100px;
+    padding: 20px 0;
     background-color: #FFBE55; }
     .navbar-wrapper__bottom--inner {
       position: relative;
@@ -213,11 +214,14 @@ body.page-template-diensten .logo-en-huisstijl {
     margin: auto;
     max-width: 1200px;
     grid-template-columns: 50% 50%; }
-    body.page-template-diensten .logo-en-huisstijl__inner--right p {
-      margin: 20px 0 60px; }
     body.page-template-diensten .logo-en-huisstijl__inner--left {
       display: flex;
       justify-content: center; }
+      body.page-template-diensten .logo-en-huisstijl__inner--left img {
+        align-self: center;
+        width: 465px; }
+    body.page-template-diensten .logo-en-huisstijl__inner--right p {
+      margin: 20px 0 40px; }
 
 body.page-template-diensten .websites {
   padding: 50px 0;
@@ -230,10 +234,45 @@ body.page-template-diensten .websites {
     body.page-template-diensten .websites__inner--left {
       position: relative; }
       body.page-template-diensten .websites__inner--left p {
-        margin: 20px 0 60px; }
+        margin: 20px 0 40px; }
     body.page-template-diensten .websites__inner--right {
       display: flex;
       justify-content: center; }
+      body.page-template-diensten .websites__inner--right img {
+        align-self: center;
+        width: 465px; }
+
+body.page-template-diensten .mobiele-apps {
+  color: #fff;
+  padding: 250px 0 250px;
+  position: relative; }
+  body.page-template-diensten .mobiele-apps::after {
+    z-index: -1;
+    content: '';
+    background-color: #222429;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%); }
+  body.page-template-diensten .mobiele-apps__inner {
+    display: grid;
+    margin: auto;
+    max-width: 1200px;
+    grid-template-columns: 50% 50%; }
+    body.page-template-diensten .mobiele-apps__inner--left {
+      display: flex;
+      justify-content: center; }
+      body.page-template-diensten .mobiele-apps__inner--left img {
+        align-self: center;
+        width: 465px; }
+    body.page-template-diensten .mobiele-apps__inner--right p {
+      margin: 20px 0; }
+    body.page-template-diensten .mobiele-apps__inner--right a {
+      display: inline-block;
+      border: 1px solid #222429;
+      margin-top: 40px; }
 
 body.page-template.home .hero {
   margin-top: -100px;
@@ -266,7 +305,7 @@ body.page-template.home .diensten {
     color: #fff;
     padding: 200px 0 250px;
     background-color: #222429;
-    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%); }
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%); }
     body.page-template.home .diensten .intro__inner {
       position: relative;
       max-width: 1200px;
@@ -346,3 +385,43 @@ body.page-template.home .quotes {
     max-width: 1200px; }
     body.page-template.home .quotes__inner .quote-person {
       margin: 20px 0 65px; }
+
+body.page-template-over-ons .hero {
+  padding: 100px 0 0;
+  position: relative; }
+  body.page-template-over-ons .hero__inner {
+    margin: auto;
+    max-width: 1200px; }
+    body.page-template-over-ons .hero__inner--content {
+      position: relative;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center; }
+      body.page-template-over-ons .hero__inner--content img {
+        z-index: 10;
+        position: relative; }
+
+body.page-template-over-ons .verhaal {
+  margin-top: -200px;
+  color: white;
+  padding: 300px 0 200px;
+  position: relative; }
+  body.page-template-over-ons .verhaal::after {
+    z-index: -1;
+    content: '';
+    background-color: #222429;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%); }
+  body.page-template-over-ons .verhaal__inner {
+    max-width: 1200px;
+    margin: auto; }
+    body.page-template-over-ons .verhaal__inner h1 {
+      text-align: center; }
+    body.page-template-over-ons .verhaal__inner--top {
+      display: grid;
+      grid-template-columns: 40% 60%; }

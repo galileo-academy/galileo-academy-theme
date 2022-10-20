@@ -48,17 +48,22 @@ body.page-template-diensten {
             max-width: 1200px;
             grid-template-columns: 50% 50%;
 
-            &--right {
-
-                p {
-                    margin: 20px 0 60px;
-                }
-
-            }
-
             &--left {
                 display: flex;
                 justify-content: center;
+                
+                img {
+                    align-self: center;
+                    width: 465px;
+                }
+            }
+
+            &--right {
+
+                p {
+                    margin: 20px 0 40px;
+                }
+
             }
         }
     }
@@ -77,13 +82,68 @@ body.page-template-diensten {
                 position: relative;
 
                 p {
-                    margin: 20px 0 60px;
+                    margin: 20px 0 40px;
                 }
             }
 
             &--right {
                 display: flex;
                 justify-content: center;
+                
+                img {
+                    align-self: center;
+                    width: 465px;
+                }
+            }
+        }
+    }
+
+    .mobiele-apps {
+        color: $white;
+        padding: 250px 0 250px;
+        position: relative;
+
+        &::after {
+            z-index: -1;
+            content: '';
+            background-color: $medium-grey;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+
+        }
+
+        &__inner {
+            display: grid;
+            margin: auto;
+            max-width: 1200px;
+            grid-template-columns: 50% 50%;
+
+            &--left {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    align-self: center;
+                    width: 465px;
+                }
+            }
+
+            &--right {
+
+                p {
+                    margin: 20px 0;
+                }
+
+                a {
+                    display: inline-block;
+                    border: 1px solid $medium-grey;
+                    margin-top: 40px;
+                }
+    
             }
         }
     }

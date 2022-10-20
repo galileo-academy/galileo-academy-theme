@@ -28,6 +28,7 @@ class UptopSetup {
 		
 		add_action( 'wp_enqueue_scripts', [$this, 'enqueueDependencies'], 99 );
 		add_action( 'init', [$this, 'registerNavigations'] );
+		add_action( 'init', [$this, 'registerPostTypes'] );
 
 		if($settings['acf_google_api'] != '') {
 			add_action('acf/init', [$this, 'addGoogleMaps']);
@@ -70,6 +71,42 @@ class UptopSetup {
 			  'third' => __( 'Third Menu' ),
 			  'fourth' => __( 'Fourth Menu' ),
 			  'fifth' => __( 'Fifth Menu' ),
+			)
+		);
+	}
+
+	public function registerPostTypes() {
+		register_post_type('diensten',
+			array(
+				'labels' => array(
+					'name' => __('Diensten', 'textdomain'),
+					'singular_name' => __('Dienst', 'textdomain'),
+					'add_new' => __('Nieuwe Dienst', 'textdomain'),
+					'add_new_item' => __('Nieuwe Dienst Toevoegen', 'textdomain'),
+					'all_items' => __("Alle Diensten", 'textdomain' )
+				),
+				'public' => true,
+				'has_archive' => false,
+				'rewrite' => array('slug' => 'dienst'),
+				'menu_icon' => 'dashicons-image-filter',
+				'supports' => array('title', 'thumbnail'),
+			)
+		);
+
+		register_post_type('cases',
+			array(
+				'labels' => array(
+					'name' => __('Cases', 'textdomain'),
+					'singular_name' => __('Case', 'textdomain'),
+					'add_new' => __('Nieuwe Case', 'textdomain'),
+					'add_new_item' => __('Nieuwe Case Toevoegen', 'textdomain'),
+					'all_items' => __("Alle Cases", 'textdomain' )
+				),
+				'public' => true,
+				'has_archive' => false,
+				'rewrite' => array('slug' => 'case'),
+				'menu_icon' => 'dashicons-portfolio',
+				'supports' => array('title', 'thumbnail'),
 			)
 		);
 	}
