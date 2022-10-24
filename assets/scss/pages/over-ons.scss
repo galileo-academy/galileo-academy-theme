@@ -24,9 +24,10 @@ body.page-template-over-ons {
     }
 
     .verhaal {
+        z-index: 1;
         margin-top: -200px;
         color: white;
-        padding: 300px 0 200px;
+        padding: 300px 0 300px;
         position: relative;
 
         &::after {
@@ -38,7 +39,7 @@ body.page-template-over-ons {
             bottom: 0;
             left: 0;
             right: 0;
-            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
         }
 
         &__inner {
@@ -50,8 +51,142 @@ body.page-template-over-ons {
             }
 
             &--top {
+                margin: 20px 0;
                 display: grid;
                 grid-template-columns: 40% 60%;
+                gap: 20px;
+
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &--bottom {
+                margin: 20px 0;
+                display: grid;
+                grid-template-columns: 60% 40%;
+                gap: 20px;
+
+                p {
+                    margin-bottom: 20px;
+                }
+
+                .right {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+    .bedrijfscultuur {
+        z-index: -1;
+        margin-top: -180px;
+        position: relative;
+        padding: 200px 0;
+
+        h1 {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        &::after {
+            z-index: -1;
+            content: '';
+            background-color: $yellow;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 88%);
+        }
+
+        &__inner {
+            max-width: 1200px;
+            margin: auto;
+
+            &--top {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                gap: 20px;
+            }
+
+            &--bottom {
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                gap: 20px;
+            }
+        }
+    }
+
+    .team {
+        padding: 50px 0;
+
+        &__inner {
+            max-width: 1200px;
+            margin: auto;
+
+            h1 {
+                text-align: center;
+            }
+
+            &--content {
+                margin: 70px 0;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                gap: 20px;
+
+                .teamslid {
+                    display: flex;
+                    flex-flow: column;
+
+                    .teamslid-afbeelding {
+                        height: 300px;
+                        width: 300px;
+                        align-self: center;
+                        border-radius: 500px;
+                        object-fit: cover;
+                    }
+
+                    .text-block {
+                        margin-top: 30px;
+                        display: flex;
+                        flex-flow: column;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .cta-bottom {
+        position: relative;
+        padding: 300px 0 200px;
+        color: $white;
+
+        &::after {
+            z-index: -1;
+            content: '';
+            background-color: $medium-grey;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        &__inner {
+            margin: auto;
+            max-width: 950px;
+            text-align: center;
+
+            &--content {
+                display: flex;
+                flex-flow: column;
+                gap: 10px;
             }
         }
     }
