@@ -66,7 +66,11 @@ a {
   top: -85px;
   left: -200px;
   width: 200px;
-  height: 200px; }
+  height: 200px;
+  transition: all 0.2s ease-in-out; }
+  .header:hover {
+    color: #fff;
+    background-color: #FFBE55; }
 
 .footer {
   position: absolute;
@@ -78,7 +82,7 @@ a {
 .intro-cta {
   z-index: 20;
   position: absolute;
-  bottom: -150px;
+  bottom: -160px;
   left: 0;
   width: 240px;
   height: 240px; }
@@ -178,8 +182,67 @@ a {
       .navbar-wrapper__bottom--inner .header-cta {
         position: relative; }
 
+body.page-template-contact .hero {
+  padding: 100px 0 0;
+  z-index: 2;
+  position: relative; }
+  body.page-template-contact .hero__inner {
+    max-width: 1200px;
+    margin: auto; }
+    body.page-template-contact .hero__inner--content {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center; }
+      body.page-template-contact .hero__inner--content img {
+        position: relative;
+        height: 270px;
+        align-self: center; }
+
+body.page-template-contact .contactinfo {
+  z-index: 1;
+  margin-top: -200px;
+  color: #fff;
+  position: relative;
+  padding: 300px 0 250px; }
+  body.page-template-contact .contactinfo::after {
+    z-index: -1;
+    content: '';
+    background-color: #222429;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%); }
+  body.page-template-contact .contactinfo__inner {
+    max-width: 1200px;
+    margin: auto; }
+    body.page-template-contact .contactinfo__inner h1 {
+      margin-bottom: 20px;
+      text-align: center; }
+    body.page-template-contact .contactinfo__inner--content {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      gap: 20px; }
+      body.page-template-contact .contactinfo__inner--content .left {
+        display: flex;
+        position: relative;
+        flex-flow: column;
+        gap: 40px; }
+        body.page-template-contact .contactinfo__inner--content .left .contactgegevens {
+          display: grid;
+          grid-template-columns: 20% 80%; }
+          body.page-template-contact .contactinfo__inner--content .left .contactgegevens .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            body.page-template-contact .contactinfo__inner--content .left .contactgegevens .icon img {
+              max-height: 50px; }
+
 body.page-template-contact .contactform {
-  margin: 200px 0;
+  z-index: 0;
+  margin: -210px 0;
   padding: 300px 0;
   position: relative; }
   body.page-template-contact .contactform::after {
@@ -214,12 +277,44 @@ body.page-template-contact .contactform {
           border-radius: 5px;
           padding: 14px;
           width: 100%; }
+        body.page-template-contact .contactform__inner--content form input[type="submit"] {
+          color: #fff;
+          background-color: #1579C7;
+          width: 50%;
+          font-weight: 500;
+          text-transform: uppercase;
+          transition: background-color 0.3s ease-in-out; }
+          body.page-template-contact .contactform__inner--content form input[type="submit"]:hover {
+            background-color: #1562A3; }
         body.page-template-contact .contactform__inner--content form label {
           font-size: 24px;
           line-height: 200%;
           font-weight: 800; }
         body.page-template-contact .contactform__inner--content form .full-width {
           grid-column: 1 / 3; }
+
+body.page-template-contact .cta-bottom {
+  position: relative;
+  padding: 300px 0 200px;
+  color: #fff; }
+  body.page-template-contact .cta-bottom::after {
+    z-index: -1;
+    content: '';
+    background-color: #222429;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%); }
+  body.page-template-contact .cta-bottom__inner {
+    margin: auto;
+    max-width: 950px;
+    text-align: center; }
+    body.page-template-contact .cta-bottom__inner--content {
+      display: flex;
+      flex-flow: column;
+      gap: 10px; }
 
 body.page-template-diensten .hero {
   padding: 100px 0 0;
@@ -526,7 +621,8 @@ body.page-template-over-ons .team {
       margin: 70px 0;
       display: grid;
       grid-template-columns: 50% 50%;
-      gap: 20px; }
+      gap: 20px;
+      row-gap: 40px; }
       body.page-template-over-ons .team__inner--content .teamslid {
         display: flex;
         flex-flow: column; }

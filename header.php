@@ -24,7 +24,7 @@
 				<div class="desktop-menu"><?php wp_nav_menu(["theme_location" => "primary"]); ?></div>	
 			</div>
 			<div class="header-cta">
-				<a href="" class="cta header">Direct contact</a>
+				<a href="/contact" class="cta header">Direct contact</a>
 			</div>
 		</div>
 	</div>
