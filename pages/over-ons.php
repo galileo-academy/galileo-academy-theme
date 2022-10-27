@@ -82,8 +82,7 @@
 <div class="cta-bottom">
     <div class="cta-bottom__inner">
         <div class="cta-bottom__inner--content">
-            <h1>Interesse in een website laten maken?</h1>
-            <h3>Kan uw website wel een update gebruiken of wilt u een hele nieuwe website laten bouwen? Neem contact met ons op om te kijken wat wij voor u kunt betekenen.</h3>
+            <?php the_field('section_content', 'option') ?>    
         </div>
     </div>
 </div>

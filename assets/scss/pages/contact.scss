@@ -1,7 +1,90 @@
 body.page-template-contact {
 
+    .hero {
+        padding: 100px 0 0;
+        z-index: 2;
+        position: relative;
+
+        &__inner {
+            max-width: 1200px;
+            margin: auto;
+
+            &--content {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    position: relative;
+                    height: 270px;
+                    align-self: center;
+                }
+            }
+        }
+    }
+
+    .contactinfo {
+        z-index: 1;
+        margin-top: -200px;
+        color: $white;
+        position: relative;
+        padding: 300px 0 250px;
+
+        &::after {
+            z-index: -1;
+            content: '';
+            background-color: $medium-grey;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+        }
+
+        &__inner {
+            max-width: 1200px;
+            margin: auto;
+
+            h1 {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            &--content {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                gap: 20px;
+
+                .left {
+                    display: flex;
+                    position: relative;
+                    flex-flow: column;
+                    gap: 40px;
+
+                    .contactgegevens {
+                        display: grid;
+                        grid-template-columns: 20% 80%;
+
+                        .icon {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+    
+                            img {
+                                max-height: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .contactform {
-        margin: 200px 0;
+        z-index: 0;
+        margin: -210px 0;
         padding: 300px 0;
         position: relative;
 
@@ -46,6 +129,19 @@ body.page-template-contact {
                         width: 100%;
                     }
 
+                    input[type="submit"] {
+                        color: $white;
+                        background-color: $blue;
+                        width: 50%;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        transition: background-color 0.3s ease-in-out;
+
+                        &:hover {
+                            background-color: $blue-hover;
+                        }
+                    }
+
                     label {
                         font-size: 24px;
                         line-height: 200%;
@@ -57,6 +153,36 @@ body.page-template-contact {
                     }
                 }
 
+            }
+        }
+    }
+
+    .cta-bottom {
+        position: relative;
+        padding: 300px 0 200px;
+        color: $white;
+
+        &::after {
+            z-index: -1;
+            content: '';
+            background-color: $medium-grey;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        &__inner {
+            margin: auto;
+            max-width: 950px;
+            text-align: center;
+
+            &--content {
+                display: flex;
+                flex-flow: column;
+                gap: 10px;
             }
         }
     }
