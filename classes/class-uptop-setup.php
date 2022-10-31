@@ -15,6 +15,7 @@ class UptopSetup {
 		'dev' => false,
 		'acf_option_page' => true,
 		'acf_google_api' => '',
+		'theme_support' => true
 	];
 	protected $settings;
 
@@ -44,6 +45,10 @@ class UptopSetup {
 
 		if($settings['woocommerce']) {
 			$this->enableWoocommerce();
+		}
+
+		if($settings['theme_support']) {
+			$this->addThemeSupport();
 		}
 
 		// Remove Emojis for optimalisation
@@ -134,6 +139,10 @@ class UptopSetup {
 
 	public function addGoogleMaps() {
 		acf_update_setting('google_api_key', $this->settings['acf_google_api']);
+	}
+
+	public function addThemeSupport() {
+		add_theme_support('post-thumbnails');
 	}
 	
 }

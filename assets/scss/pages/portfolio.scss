@@ -1,0 +1,145 @@
+body.page-template-portfolio {
+
+    .hero {
+        padding: 100px 0 0;
+        position: relative;
+
+        &__inner {
+            margin: auto;
+            max-width: 1200px;
+
+            &--content {
+                position: relative;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    z-index: 10;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .intro {
+        z-index: 1;
+        margin-top: -220px;
+        padding: 300px 0 200px;
+        position: relative;
+        color: $white;
+
+        &::after {
+            z-index: -1;
+            content: '';
+            background-color: $medium-grey;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: polygon(0 0, 100% 16%, 100% 84%, 0% 100%);
+        }
+
+        &__inner {
+            margin: auto;
+            max-width: 1200px;
+
+            h1 {
+                text-align: center;
+            }
+
+            &--content {
+                display: flex;
+                flex-flow: column;
+                gap: 20px;
+
+                a {
+                    margin-top: 30px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .opdrachtgevers {
+        z-index: 0;
+        margin: -180px 0;
+        padding: 300px 0;
+        position: relative;
+
+        &:after {
+            z-index: -1;
+            content: '';
+            background-color: $yellow;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        &__inner {
+            display: flex;
+            flex-flow: column;
+            gap: 80px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+
+            &--loop {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+
+                .project {
+                    margin: auto;
+                    display: flex;
+                    height: 200px;
+                    width: 200px;
+                    background-color: $white;
+                    border-radius: 200px;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 150px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+    
+    .cta-bottom {
+        z-index: 1;
+        position: relative;
+        padding: 300px 0 200px;
+        color: $white;
+
+        &::after {
+            z-index: -1;
+            content: '';
+            background-color: $medium-grey;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        &__inner {
+            margin: auto;
+            max-width: 950px;
+            text-align: center;
+
+            &--content {
+                display: flex;
+                flex-flow: column;
+                gap: 10px;
+            }
+        }
+    }
+
+}
