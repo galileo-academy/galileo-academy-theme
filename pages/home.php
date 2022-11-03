@@ -71,8 +71,13 @@
     while ( have_rows('beoordelingen') ) : the_row();
     ?>
     <div class="quotes__inner">
-        <p class="quote">“<?php the_sub_field('content', false) ?>”</p>
-        <p class="p-small quote-person"><?php the_sub_field('naam') ?><br/> <?php the_sub_field('functie') ?> | <?php the_sub_field('bedrijf') ?></p>
+        <?php the_sub_field('content') ?>
+
+        <div class="quote-person">
+            <h3><?php the_sub_field('naam') ?></h3>
+            <p class="p-small"><?php the_sub_field('functie') ?> | <?php the_sub_field('bedrijf') ?></p>
+        </div>
+        
         <a href="/" class="button yellow">Meer beoordelingen lezen</a>
     </div>
     <?php 

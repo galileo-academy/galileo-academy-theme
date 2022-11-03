@@ -16,6 +16,7 @@ body.single-cases {
                 justify-content: center;
 
                 img {
+                    height: 350px;
                     padding: 40px 80px;
                     border-radius: 10px;
                     z-index: 10;
@@ -43,7 +44,7 @@ body.single-cases {
             bottom: 0;
             left: 0;
             right: 0;
-            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+            clip-path: polygon(0 0, 100% 150px, 100% calc( 100% - 150px), 0% 100%);
         }
 
         &__inner {
@@ -53,12 +54,12 @@ body.single-cases {
 
             &--content {
 
-
                 .omschrijving_screenshot {
                     position: absolute;
                     bottom: -150px;
 
                     img {
+                        width: 100%;
                         max-width: 1200px;
                         object-fit: cover;
                     }
@@ -70,7 +71,7 @@ body.single-cases {
 
     .project_process {
         margin-top: -260px;
-        padding: 450px 0 300px;
+        padding: 450px 0 200px;
         position: relative;
 
         &::after {
@@ -82,7 +83,7 @@ body.single-cases {
             bottom: 0;
             left: 0;
             right: 0;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+            clip-path: polygon(0 0, 100% 0, 100% calc( 100% - 150px), 0% 100%);
 
         }
 
@@ -91,20 +92,42 @@ body.single-cases {
             display: grid;
             margin: auto;
             max-width: 1200px;
+
+            h1 {
+                margin-bottom: 15px;
+            }
+
+            .URL-website {
+                margin-top: 30px;
+
+                p {
+                    margin: 0;
+                }
+
+                a {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 
     .quotes {
         position: relative;
-        padding: 100px 0;
+        padding: 100px 0 300px;
 
         &__inner {
             margin: auto;
             max-width: 1200px;
+
+            h1 {
+                margin-bottom: 15px;
+                text-align: center;
+            }
         }
     }
 
     .cta-bottom {
+        margin-top: -200px;
         position: relative;
         padding: 300px 0 200px;
         color: $white;
@@ -118,7 +141,7 @@ body.single-cases {
             bottom: 0;
             left: 0;
             right: 0;
-            clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 150px, 100% 0%, 100% 100%, 0% 100%);
         }
 
         &__inner {

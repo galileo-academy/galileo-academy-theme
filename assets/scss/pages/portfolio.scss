@@ -51,9 +51,7 @@ body.page-template-portfolio {
             }
 
             &--content {
-                display: flex;
-                flex-flow: column;
-                gap: 20px;
+                position: relative;
 
                 a {
                     margin-top: 30px;

@@ -19,16 +19,24 @@ h3 {
   font-weight: 800; }
 
 p {
+  margin: 18px 0;
   font-size: 18px;
   line-height: 150%;
   font-weight: 300; }
 
 .p-small {
+  margin: 0;
   font-size: 14px;
   line-height: 150%;
   font-weight: 600; }
 
 .quote {
+  font-size: 32px;
+  line-height: 150%;
+  font-weight: 200; }
+
+blockquote p {
+  margin: 32px 0;
   font-size: 32px;
   line-height: 150%;
   font-weight: 200; }
@@ -699,9 +707,7 @@ body.page-template-portfolio .intro {
     body.page-template-portfolio .intro__inner h1 {
       text-align: center; }
     body.page-template-portfolio .intro__inner--content {
-      display: flex;
-      flex-flow: column;
-      gap: 20px; }
+      position: relative; }
       body.page-template-portfolio .intro__inner--content a {
         margin-top: 30px;
         display: inline-block; }
@@ -780,6 +786,7 @@ body.single-cases .hero {
       align-items: center;
       justify-content: center; }
       body.single-cases .hero__inner--content img {
+        height: 350px;
         padding: 40px 80px;
         border-radius: 10px;
         z-index: 10;
@@ -802,7 +809,7 @@ body.single-cases .omschrijving {
     bottom: 0;
     left: 0;
     right: 0;
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%); }
+    clip-path: polygon(0 0, 100% 150px, 100% calc( 100% - 150px), 0% 100%); }
   body.single-cases .omschrijving__inner {
     display: grid;
     margin: auto;
@@ -811,12 +818,13 @@ body.single-cases .omschrijving {
       position: absolute;
       bottom: -150px; }
       body.single-cases .omschrijving__inner--content .omschrijving_screenshot img {
+        width: 100%;
         max-width: 1200px;
         object-fit: cover; }
 
 body.single-cases .project_process {
   margin-top: -260px;
-  padding: 450px 0 300px;
+  padding: 450px 0 200px;
   position: relative; }
   body.single-cases .project_process::after {
     z-index: -1;
@@ -827,21 +835,33 @@ body.single-cases .project_process {
     bottom: 0;
     left: 0;
     right: 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); }
+    clip-path: polygon(0 0, 100% 0, 100% calc( 100% - 150px), 0% 100%); }
   body.single-cases .project_process__inner {
     position: relative;
     display: grid;
     margin: auto;
     max-width: 1200px; }
+    body.single-cases .project_process__inner h1 {
+      margin-bottom: 15px; }
+    body.single-cases .project_process__inner .URL-website {
+      margin-top: 30px; }
+      body.single-cases .project_process__inner .URL-website p {
+        margin: 0; }
+      body.single-cases .project_process__inner .URL-website a {
+        text-decoration: underline; }
 
 body.single-cases .quotes {
   position: relative;
-  padding: 100px 0; }
+  padding: 100px 0 300px; }
   body.single-cases .quotes__inner {
     margin: auto;
     max-width: 1200px; }
+    body.single-cases .quotes__inner h1 {
+      margin-bottom: 15px;
+      text-align: center; }
 
 body.single-cases .cta-bottom {
+  margin-top: -200px;
   position: relative;
   padding: 300px 0 200px;
   color: #fff; }
@@ -854,7 +874,7 @@ body.single-cases .cta-bottom {
     bottom: 0;
     left: 0;
     right: 0;
-    clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%); }
+    clip-path: polygon(0 150px, 100% 0%, 100% 100%, 0% 100%); }
   body.single-cases .cta-bottom__inner {
     margin: auto;
     max-width: 950px;
