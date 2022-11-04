@@ -1,32 +1,44 @@
-body.page-template-portfolio {
+body.page-template-wmitw {
 
     .hero {
         padding: 100px 0 0;
+        z-index: 2;
         position: relative;
 
         &__inner {
-            margin: auto;
             max-width: 1200px;
+            margin: auto;
 
             &--content {
-                position: relative;
                 display: flex;
                 flex-flow: column;
-                align-items: center;
                 justify-content: center;
+                align-items: center;
 
-                img {
-                    z-index: 10;
-                    position: relative;
+                .hero_afbeelding {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: center;
+                    background-color: $white;
+                    padding: 20px 25px;
+                    height: 320px;
+                    border: 4px solid $yellow;
+                    border-radius: 500px;
+
+                    img {
+                        position: relative;
+                        align-self: center;
+                    }
+
                 }
             }
         }
     }
 
-    .intro {
+    .traject {
         z-index: 1;
-        margin-top: -220px;
-        padding: 300px 0 200px;
+        margin-top: -230px;
+        padding: 300px 0;
         position: relative;
         color: $white;
 
@@ -39,35 +51,21 @@ body.page-template-portfolio {
             bottom: 0;
             left: 0;
             right: 0;
-            clip-path: polygon(0 0, 100% 150px, 100% calc(100% - 150px), 0% 100%);
+            clip-path: polygon(0 0, 100% 150px, 100% calc( 100% - 150px), 0% 100%);
         }
 
         &__inner {
+            display: grid;
             margin: auto;
             max-width: 1200px;
-
-            h1 {
-                text-align: center;
-            }
-
-            &--content {
-                position: relative;
-
-                a {
-                    margin-top: 30px;
-                    display: inline-block;
-                }
-            }
         }
     }
 
-    .opdrachtgevers {
-        z-index: 0;
-        margin: -180px 0;
-        padding: 300px 0;
+    .quote {
         position: relative;
+        padding: 300px 0;
 
-        &:after {
+        &::after {
             z-index: -1;
             content: '';
             background-color: $yellow;
@@ -76,41 +74,43 @@ body.page-template-portfolio {
             bottom: 0;
             left: 0;
             right: 0;
+            clip-path: polygon(0 150px, 100% 0%, 100% calc( 100% - 150px), 0% 100%);
         }
 
         &__inner {
-            display: flex;
-            flex-flow: column;
-            gap: 80px;
-            max-width: 1200px;
             margin: auto;
-            text-align: center;
+            max-width: 1200px;
 
-            &--loop {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
+            &--content {
 
-                .project {
-                    margin: auto;
-                    display: flex;
-                    height: 200px;
-                    width: 200px;
-                    background-color: $white;
-                    border-radius: 200px;
-                    justify-content: center;
-                    align-items: center;
-
-                    img {
-                        width: 150px;
-                        object-fit: contain;
-                    }
+                h1 {
+                    text-align: center;
                 }
+
+                .swiper {
+                    margin: 0;
+                    position: relative;
+                }
+            
+                .swiper-slide blockquote,
+                .swiper-slide h3 {
+                opacity: 0;
+                display: block;
+                width: 100%;
+                object-fit: contain;
+                }
+    
+                .swiper-slide-active blockquote,
+                .swiper-slide-active h3 {
+                opacity: 1;
+                }
+
             }
         }
     }
     
     .cta-bottom {
-        z-index: 1;
+        margin-top: -200px;
         position: relative;
         padding: 300px 0 200px;
         color: $white;
@@ -139,5 +139,4 @@ body.page-template-portfolio {
             }
         }
     }
-
 }

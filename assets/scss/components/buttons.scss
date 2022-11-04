@@ -9,7 +9,13 @@
     height: 200px;
     transition: all 0.2s ease-in-out;
 
-    &:hover {
+    &:hover,
+    &:focus {
+        color: $white;
+        background-color: $yellow;
+    }
+
+    &.active {
         color: $white;
         background-color: $yellow;
     }

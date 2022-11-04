@@ -62,9 +62,11 @@ class UptopSetup {
 	public function enqueueDependencies() {
 		// Styles
 		wp_enqueue_style('child-theme-main', get_template_directory_uri() .'/assets/css/app.css', array());
+		wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper@8/swiper-bundle.min.css');
 
 		// Scripts
 		wp_enqueue_script('child-theme-main', get_template_directory_uri() . '/assets/js/app.js', array(), false, true);
+		wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper@8/swiper-bundle.min.js');
     	wp_localize_script( 'child-theme-main', 'params', array( 'ajaxurl' => admin_url('admin-ajax.php')) );
 	}
 

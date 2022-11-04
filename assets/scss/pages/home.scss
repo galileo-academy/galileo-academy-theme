@@ -41,7 +41,7 @@ body.page-template.home {
             color: $white;
             padding: 200px 0 250px;
             background-color: $medium-grey;
-            clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
+            clip-path: polygon(0 0, 100% 150px, 100% 100%, 0 calc(100% - 150px));
 
             &__inner {
                 position: relative;
@@ -67,7 +67,7 @@ body.page-template.home {
             left: 0;
             bottom: 0;
             background-color: $yellow;
-            clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+            clip-path: polygon(0 150px, 100% 0%, 100% calc(100% - 150px), 0% 100%);
 
         }
 
@@ -145,7 +145,7 @@ body.page-template.home {
             left: 0;
             bottom: 0;
             background-color: $medium-grey;
-            clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 150px, 100% 100%, 0% 100%);
         }
 
         &__inner {

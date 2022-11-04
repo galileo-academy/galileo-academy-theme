@@ -40,7 +40,7 @@ body.page-template-contact {
             bottom: 0;
             left: 0;
             right: 0;
-            clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+            clip-path: polygon(0 150px, 100% 0%, 100% calc(100% - 150px), 0% 100%);
         }
 
         &__inner {
@@ -67,6 +67,10 @@ body.page-template-contact {
                         display: grid;
                         grid-template-columns: 20% 80%;
 
+                        p {
+                            margin: 0;
+                        }
+
                         .icon {
                             display: flex;
                             justify-content: center;
@@ -85,7 +89,7 @@ body.page-template-contact {
     .contactform {
         z-index: 0;
         margin: -210px 0;
-        padding: 300px 0;
+        padding: 300px 0 200px;
         position: relative;
 
         &::after {
@@ -97,7 +101,7 @@ body.page-template-contact {
             bottom: 0;
             left: 0;
             right: 0;
-            clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+            clip-path: polygon(0 150px, 100% 0, 100% calc(100% - 150px), 0% 100%);
         }
 
         &__inner {
@@ -158,6 +162,7 @@ body.page-template-contact {
     }
 
     .cta-bottom {
+        z-index: 1;
         position: relative;
         padding: 300px 0 200px;
         color: $white;
@@ -171,7 +176,7 @@ body.page-template-contact {
             bottom: 0;
             left: 0;
             right: 0;
-            clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 150px, 100% 0%, 100% 100%, 0% 100%);
         }
 
         &__inner {

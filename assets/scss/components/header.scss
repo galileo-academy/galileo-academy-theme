@@ -27,10 +27,21 @@
                     display: inline;
                     gap: 50px;
 
+                    &.current-menu-item a {
+                        color: $white;
+                    }
+
                     a {
                         color: $dark-grey;
                         text-transform: uppercase;
                         font-weight: 600;
+                        transition: color 0.2s ease-in-out;
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            color: $white;
+                        }
                     }
                 }
             }
