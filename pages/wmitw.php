@@ -20,6 +20,19 @@
     </div>
 </div>
 
+<div class="opleiden">
+    <div class="opleiden__inner">
+        <div class="opleiden__inner--intro"><?php the_field('intro_content') ?></div>
+        <div class="opleiden__inner--loop">
+            <?php if ( have_rows( 'content_blocks' ) && !empty( have_rows('content_blocks' ) ) ) { ?>
+            <?php while( have_rows( 'content_blocks' ) ): the_row(); ?>
+            <div class="content-block"><?php the_sub_field('content_block') ?></div>
+            <?php endwhile; ?>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+
 <div class="quote">
     <div class="quote__inner">
         <div class="quote__inner--content">

@@ -895,6 +895,142 @@ body.single-cases .cta-bottom {
       flex-flow: column;
       gap: 10px; }
 
+body.single-diensten .hero {
+  padding: 100px 0 0;
+  position: relative; }
+  body.single-diensten .hero__inner {
+    margin: auto;
+    max-width: 1200px; }
+    body.single-diensten .hero__inner--content {
+      position: relative;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center; }
+      body.single-diensten .hero__inner--content img {
+        border-radius: 10px;
+        z-index: 10;
+        position: relative; }
+
+body.single-diensten .intro {
+  z-index: 1;
+  margin-top: -250px;
+  padding: 350px 0 300px;
+  position: relative;
+  color: #fff; }
+  body.single-diensten .intro::after {
+    z-index: -1;
+    content: '';
+    background-color: #222429;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 150px, 100% 100%, 0% calc( 100% - 150px)); }
+  body.single-diensten .intro__inner {
+    margin: auto;
+    max-width: 1200px; }
+    body.single-diensten .intro__inner--content h1 {
+      text-align: center; }
+    body.single-diensten .intro__inner--content img {
+      float: right; }
+    body.single-diensten .intro__inner--content a {
+      text-align: center;
+      display: inline-block;
+      margin-top: 40px;
+      width: 400px; }
+
+body.single-diensten .werkwijze {
+  margin-top: -150px;
+  padding: 200px 0;
+  position: relative; }
+  body.single-diensten .werkwijze::after {
+    z-index: -1;
+    content: '';
+    background-color: #FFBE55;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 150px, 100% 100%, 0% calc( 100% - 150px)); }
+  body.single-diensten .werkwijze__inner {
+    position: relative;
+    display: grid;
+    margin: auto;
+    max-width: 1200px; }
+    body.single-diensten .werkwijze__inner .center {
+      text-align: center;
+      margin-bottom: 40px; }
+    body.single-diensten .werkwijze__inner .content-blocks {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 20px;
+      row-gap: 30px; }
+
+body.single-diensten .FAQ {
+  padding: 50px 0; }
+  body.single-diensten .FAQ__inner {
+    max-width: 1200px;
+    margin: auto; }
+    body.single-diensten .FAQ__inner--content {
+      position: relative; }
+      body.single-diensten .FAQ__inner--content h1 {
+        text-align: center; }
+      body.single-diensten .FAQ__inner--content .loop {
+        display: flex;
+        flex-flow: column; }
+        body.single-diensten .FAQ__inner--content .loop .accordion {
+          position: relative;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          text-align: left;
+          border: none;
+          outline: none;
+          transition: 0.4s; }
+          body.single-diensten .FAQ__inner--content .loop .accordion:after {
+            content: "\25B2";
+            float: right;
+            font-size: 20px;
+            margin-left: 5px; }
+        body.single-diensten .FAQ__inner--content .loop .active:after {
+          content: "\25BC";
+          /* Unicode character for "minus" sign (-) */
+          color: #FFBE55; }
+        body.single-diensten .FAQ__inner--content .loop .panel {
+          padding: 0 18px;
+          max-height: 0;
+          background-color: white;
+          overflow: hidden;
+          transition: max-height 0.4s ease-in-out; }
+
+body.single-diensten .cta-bottom {
+  position: relative;
+  padding: 300px 0 200px;
+  color: #fff; }
+  body.single-diensten .cta-bottom::after {
+    z-index: -1;
+    content: '';
+    background-color: #222429;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 150px, 100% 0%, 100% 100%, 0% 100%); }
+  body.single-diensten .cta-bottom__inner {
+    margin: auto;
+    max-width: 950px;
+    text-align: center; }
+    body.single-diensten .cta-bottom__inner--content {
+      display: flex;
+      flex-flow: column;
+      gap: 10px; }
+
 body.page-template-wmitw .hero {
   padding: 100px 0 0;
   z-index: 2;
@@ -940,6 +1076,19 @@ body.page-template-wmitw .traject {
     display: grid;
     margin: auto;
     max-width: 1200px; }
+
+body.page-template-wmitw .opleiden {
+  padding: 50px 0; }
+  body.page-template-wmitw .opleiden__inner {
+    max-width: 1200px;
+    margin: auto; }
+    body.page-template-wmitw .opleiden__inner--intro {
+      margin-bottom: 50px; }
+    body.page-template-wmitw .opleiden__inner--loop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      row-gap: 40px; }
 
 body.page-template-wmitw .quote {
   position: relative;

@@ -1,0 +1,195 @@
+body.single-diensten {
+
+    .hero {
+        padding: 100px 0 0;
+        position: relative;
+
+        &__inner {
+            margin: auto;
+            max-width: 1200px;
+
+            &--content {
+                position: relative;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    border-radius: 10px;
+                    z-index: 10;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .intro {
+        z-index: 1;
+        margin-top: -250px;
+        padding: 350px 0 300px;
+        position: relative;
+        color: $white;
+
+        &::after {
+            z-index: -1;
+            content: '';
+            background-color: $medium-grey;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: polygon(0 0, 100% 150px, 100% 100%, 0% calc( 100% - 150px));
+        }
+
+        &__inner {
+            margin: auto;
+            max-width: 1200px;
+
+            &--content {
+
+                h1 {
+                    text-align: center;
+                }
+
+                img {
+                    float: right;
+                }
+
+                a {
+                    text-align: center;
+                    display: inline-block;
+                    margin-top: 40px;
+                    width: 400px;
+                }
+
+            }
+        }
+    }
+
+    .werkwijze {
+        margin-top: -150px;
+        padding: 200px 0;
+        position: relative;
+
+        &::after {
+            z-index: -1;
+            content: '';
+            background-color: $yellow;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: polygon(0 0, 100% 150px, 100% 100%, 0% calc( 100% - 150px));
+
+        }
+
+        &__inner {
+            position: relative;
+            display: grid;
+            margin: auto;
+            max-width: 1200px;
+
+            .center {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .content-blocks {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 20px;
+                row-gap: 30px;
+            }
+        }
+    }
+
+    .FAQ {
+        padding: 50px 0;
+
+        &__inner {
+            max-width: 1200px;
+            margin: auto;
+
+            &--content {
+                position: relative;
+
+                h1 {
+                    text-align: center;
+                }
+
+                .loop {
+                    display: flex;
+                    flex-flow: column;
+
+                    .accordion {
+                        position: relative;
+                        cursor: pointer;
+                        padding: 18px;
+                        width: 100%;
+                        text-align: left;
+                        border: none;
+                        outline: none;
+                        transition: 0.4s;
+
+                        &:after {
+                            content: "\25B2";
+                            float: right;
+                            font-size: 20px;
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .active:after {
+                        content: "\25BC"; /* Unicode character for "minus" sign (-) */
+                        color: $yellow;
+                    }
+
+                    .panel {
+                        padding: 0 18px;
+                        max-height: 0;
+                        background-color: white;
+                        overflow: hidden;
+                        transition: max-height 0.4s ease-in-out;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .cta-bottom {
+        position: relative;
+        padding: 300px 0 200px;
+        color: $white;
+
+        &::after {
+            z-index: -1;
+            content: '';
+            background-color: $medium-grey;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: polygon(0 150px, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        &__inner {
+            margin: auto;
+            max-width: 950px;
+            text-align: center;
+
+            &--content {
+                display: flex;
+                flex-flow: column;
+                gap: 10px;
+            }
+        }
+    }
+
+}

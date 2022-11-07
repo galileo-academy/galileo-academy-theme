@@ -27,7 +27,7 @@
     <div class="websites__inner">
         <div class="websites__inner--left">
         <?php the_field('websites_content'); ?>
-            <a href="" class="button yellow">Meer info over websites</a>
+            <a href="<?php the_permalink('262') ?>" class="button yellow">Meer info over websites</a>
         </div>
         <div class="websites__inner--right">
             <img src="<?php the_field('websites_afbeelding') ?>" alt="">

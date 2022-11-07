@@ -61,6 +61,26 @@ body.page-template-wmitw {
         }
     }
 
+    .opleiden {
+        padding: 50px 0;
+
+        &__inner {
+            max-width: 1200px;
+            margin: auto;
+
+            &--intro {
+                margin-bottom: 50px;
+            }
+
+            &--loop {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                row-gap: 40px;
+            }
+        }
+    }
+
     .quote {
         position: relative;
         padding: 300px 0;
