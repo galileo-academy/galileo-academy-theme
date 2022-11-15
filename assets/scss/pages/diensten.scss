@@ -30,6 +30,10 @@ body.page-template-diensten {
                     @media (max-width: $md) {
                         height: 180px;
                     }
+
+                    @media (max-width: $sm) {
+                        visibility: hidden;
+                    }
                 }
 
             }

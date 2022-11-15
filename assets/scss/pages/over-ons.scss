@@ -5,7 +5,11 @@ body.page-template-over-ons {
         position: relative;
 
         @media (max-width: $md) {
-            padding: 50px 0 0;
+            padding: 50px 40px 0;
+        }
+
+        @media (max-width: $md) {
+            padding: 50px 20px 0;
         }
 
         &__inner {
@@ -25,6 +29,10 @@ body.page-template-over-ons {
 
                     @media (max-width: $md) {
                         width: 380px;
+                    }
+
+                    @media (max-width: $md) {
+                        width: 100%;
                     }
                 }
             }

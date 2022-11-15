@@ -24,7 +24,12 @@ body.page-template-portfolio {
                     position: relative;
 
                     @media (max-width: $md) {
-                        height: 180px
+                        height: 180px;
+                    }
+
+                    @media (max-width: $sm) {
+                        height: auto;
+                        width: 100%;
                     }
                 }
             }
@@ -43,6 +48,11 @@ body.page-template-portfolio {
             padding: 200px 40px 150px;
         }
 
+        @media (max-width: $sm) {
+            margin-top: -100px;
+            padding: 200px 20px 150px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -56,6 +66,10 @@ body.page-template-portfolio {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 0, 100% 100px, 100% calc(100% - 100px), 0% 100%);
+            } 
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 0, 100% 70px, 100% calc(100% - 70px), 0% 100%);
             } 
     
         }
@@ -84,6 +98,11 @@ body.page-template-portfolio {
         margin: -180px 0;
         padding: 300px 40px;
         position: relative;
+
+        @media (max-width: $sm) {
+            margin-top: -100px;
+            padding: 300px 20px;
+        }
 
         &:after {
             z-index: -1;
@@ -155,6 +174,10 @@ body.page-template-portfolio {
 
         @media (max-width: $md) {
             padding: 200px 40px 150px;
+        }
+
+        @media (max-width: $sm) {
+            padding: 200px 20px 150px;
         }
 
         &::after {
