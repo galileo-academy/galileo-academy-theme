@@ -63,6 +63,7 @@ class UptopSetup {
 		// Styles
 		wp_enqueue_style('child-theme-main', get_template_directory_uri() .'/assets/css/app.css', array());
 		wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper@8/swiper-bundle.min.css');
+		wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
 
 		// Scripts
 		wp_enqueue_script('child-theme-main', get_template_directory_uri() . '/assets/js/app.js', array(), false, true);

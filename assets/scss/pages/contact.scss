@@ -1,9 +1,13 @@
 body.page-template-contact {
 
     .hero {
-        padding: 100px 0 0;
+        padding: 100px 40px 0;
         z-index: 2;
         position: relative;
+
+        @media (max-width: $md) {
+            padding: 50px 40px 0;
+        }   
 
         &__inner {
             max-width: 1200px;
@@ -19,6 +23,11 @@ body.page-template-contact {
                     position: relative;
                     height: 270px;
                     align-self: center;
+
+                    @media (max-width: $md) {
+                        height: auto;
+                        width: 385px;
+                    } 
                 }
             }
         }
@@ -29,7 +38,12 @@ body.page-template-contact {
         margin-top: -200px;
         color: $white;
         position: relative;
-        padding: 300px 0 250px;
+        padding: 300px 40px 250px;
+
+        @media (max-width: $md) {
+            margin-top: -150px;
+            padding: 200px 40px 150px;
+        } 
 
         &::after {
             z-index: -1;
@@ -41,6 +55,10 @@ body.page-template-contact {
             left: 0;
             right: 0;
             clip-path: polygon(0 150px, 100% 0%, 100% calc(100% - 150px), 0% 100%);
+
+            @media (max-width: $md) {
+                clip-path: polygon(0 100px, 100% 0%, 100% calc(100% - 100px), 0% 100%);
+            }   
         }
 
         &__inner {
@@ -54,8 +72,8 @@ body.page-template-contact {
 
             &--content {
                 display: grid;
-                grid-template-columns: 50% 50%;
-                gap: 20px;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;  
 
                 .left {
                     display: flex;
@@ -82,6 +100,14 @@ body.page-template-contact {
                         }
                     }
                 }
+
+                .right {
+                    width: 100%;
+
+                    p {
+                        margin: 0;
+                    }
+                }
             }
         }
     }
@@ -89,8 +115,12 @@ body.page-template-contact {
     .contactform {
         z-index: 0;
         margin: -210px 0;
-        padding: 300px 0 200px;
+        padding: 300px 40px 200px;
         position: relative;
+
+        @media (max-width: $md) {
+            padding: 250px 40px 250px;
+        } 
 
         &::after {
             z-index: -1;
@@ -121,7 +151,7 @@ body.page-template-contact {
 
                 form {
                     display: grid;
-                    grid-template-columns: 50% 50%;
+                    grid-template-columns: 1fr 1fr;
                     gap: 20px;
 
                     input,
@@ -164,8 +194,12 @@ body.page-template-contact {
     .cta-bottom {
         z-index: 1;
         position: relative;
-        padding: 300px 0 200px;
+        padding: 300px 40px 200px;
         color: $white;
+
+        @media (max-width: $md) {
+            padding: 150px 40px 100px;
+        } 
 
         &::after {
             z-index: -1;
@@ -177,6 +211,10 @@ body.page-template-contact {
             left: 0;
             right: 0;
             clip-path: polygon(0 150px, 100% 0%, 100% 100%, 0% 100%);
+
+            @media (max-width: $md) {
+                clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%);
+            }  
         }
 
         &__inner {

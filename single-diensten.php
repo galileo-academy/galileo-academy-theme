@@ -11,6 +11,7 @@
 </div>
 <?php endif; ?>
 
+<?php if( get_field( 'intro_titel' ) && get_field( 'intro_content' ) ): ?>
 <div class="intro">
     <div class="intro__inner">
         <div class="intro__inner--content">
@@ -20,6 +21,7 @@
         </div>
     </div>
 </div>
+<?php endif; ?>
 
 <?php if( have_rows('werkwijze_blocks') ): ?>
 <div class="werkwijze">

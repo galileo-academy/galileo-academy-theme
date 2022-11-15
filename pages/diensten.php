@@ -18,7 +18,7 @@
         </div>
         <div class="logo-en-huisstijl__inner--right">
             <?php the_field('huisstijl_content'); ?>
-            <a href="" class="button yellow">Meer info over Huisstijlen</a>
+            <a href="<?php the_permalink('281') ?>" class="button yellow">Meer info over Huisstijlen</a>
         </div>
     </div>
 </div>
@@ -42,7 +42,7 @@
         </div>
         <div class="mobiele-apps__inner--right">
             <?php the_field('mobiele_apps_content'); ?>
-            <a href="" class="button yellow">Meer info over websites</a>
+            <a href="<?php the_permalink('283') ?>" class="button yellow">Meer info over websites</a>
         </div>
     </div>
 </div>

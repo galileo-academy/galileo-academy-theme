@@ -43,7 +43,7 @@
                     <!-- Slides -->
                     <?php while( have_rows( 'cursisten' ) ): the_row(); ?>
                     <div class="swiper-slide">
-                        <?php the_sub_field('quote') ?>
+                        <blockquote><?php the_sub_field('quote') ?></blockquote>
                         <h3><?php the_sub_field('naam') ?></h3>
                     </div>
                     <?php endwhile; ?> 

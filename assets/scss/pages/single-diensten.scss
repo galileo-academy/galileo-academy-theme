@@ -1,8 +1,12 @@
 body.single-diensten {
 
     .hero {
-        padding: 100px 0 0;
+        padding: 100px 40px 0;
         position: relative;
+
+        @media (max-width: $md) {
+            padding: 50px 40px 0;
+        }
 
         &__inner {
             margin: auto;
@@ -16,9 +20,15 @@ body.single-diensten {
                 justify-content: center;
 
                 img {
+                    height: 340px;
                     border-radius: 10px;
                     z-index: 10;
                     position: relative;
+
+                    @media (max-width: $md) {
+                        height: auto;
+                        width: 380px;
+                    }
                 }
             }
         }
@@ -27,9 +37,14 @@ body.single-diensten {
     .intro {
         z-index: 1;
         margin-top: -250px;
-        padding: 350px 0 300px;
+        padding: 350px 40px 300px;
         position: relative;
         color: $white;
+
+        @media (max-width: $md) {
+            padding: 250px 40px 200px;
+            margin-top: -180px;
+        }
 
         &::after {
             z-index: -1;
@@ -41,6 +56,10 @@ body.single-diensten {
             left: 0;
             right: 0;
             clip-path: polygon(0 0, 100% 150px, 100% 100%, 0% calc( 100% - 150px));
+
+            @media (max-width: $md) {
+                clip-path: polygon(0 0, 100% 100px, 100% 100%, 0% calc( 100% - 100px));
+            }
         }
 
         &__inner {
@@ -48,6 +67,7 @@ body.single-diensten {
             max-width: 1200px;
 
             &--content {
+                width: 100%;
 
                 h1 {
                     text-align: center;
@@ -55,6 +75,10 @@ body.single-diensten {
 
                 img {
                     float: right;
+
+                    @media (max-width: $md) {
+                        width: 400px;
+                    }
                 }
 
                 a {
@@ -70,8 +94,12 @@ body.single-diensten {
 
     .werkwijze {
         margin-top: -150px;
-        padding: 200px 0;
+        padding: 200px 40px;
         position: relative;
+
+        @media (max-width: $md) {
+            padding: 200px 40px 150px;
+        }
 
         &::after {
             z-index: -1;
@@ -84,6 +112,9 @@ body.single-diensten {
             right: 0;
             clip-path: polygon(0 0, 100% 150px, 100% 100%, 0% calc( 100% - 150px));
 
+            @media (max-width: $md) {
+                clip-path: polygon(0 0, 100% 100px, 100% 100%, 0% calc( 100% - 100px));
+            }
         }
 
         &__inner {
@@ -99,9 +130,7 @@ body.single-diensten {
 
             .content-blocks {
                 display: grid;
-                grid-auto-flow: column;
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr 1fr;
                 gap: 20px;
                 row-gap: 30px;
             }
@@ -120,6 +149,7 @@ body.single-diensten {
 
                 h1 {
                     text-align: center;
+                    margin-bottom: 40px;
                 }
 
                 .loop {
@@ -129,7 +159,7 @@ body.single-diensten {
                     .accordion {
                         position: relative;
                         cursor: pointer;
-                        padding: 18px;
+                        padding: 10px 18px;
                         width: 100%;
                         text-align: left;
                         border: none;
@@ -137,15 +167,17 @@ body.single-diensten {
                         transition: 0.4s;
 
                         &:after {
-                            content: "\25B2";
+                            content: "\25BC";
                             float: right;
                             font-size: 20px;
                             margin-left: 5px;
+                            transition: all 0.4s;
                         }
                     }
 
                     .active:after {
                         content: "\25BC"; /* Unicode character for "minus" sign (-) */
+                        transform: rotate(180deg);
                         color: $yellow;
                     }
 
@@ -154,7 +186,11 @@ body.single-diensten {
                         max-height: 0;
                         background-color: white;
                         overflow: hidden;
-                        transition: max-height 0.4s ease-in-out;
+                        transition: max-height 0.3s ease-in-out;
+                        
+                        p {
+                            margin: 0 0 18px;
+                        }
                     }
                 }
 
@@ -167,6 +203,10 @@ body.single-diensten {
         padding: 300px 0 200px;
         color: $white;
 
+        @media (max-width: $md) {
+            padding: 200px 40px 150px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -177,6 +217,10 @@ body.single-diensten {
             left: 0;
             right: 0;
             clip-path: polygon(0 150px, 100% 0%, 100% 100%, 0% 100%);
+
+            @media (max-width: $md) {
+                clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%);
+            }
         }
 
         &__inner {

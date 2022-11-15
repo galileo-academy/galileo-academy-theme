@@ -1,8 +1,16 @@
 body.page-template-diensten {
 
     .hero {
-        padding: 100px 0 0;
+        padding: 100px 40px 0;
         position: relative;
+
+        @media (max-width: $md) {
+            padding: 50px 40px 0;
+        }
+
+        @media (max-width: $sm) {
+            padding: 50px 20px 0;
+        }
 
         &__inner {
             margin: auto;
@@ -18,16 +26,30 @@ body.page-template-diensten {
                 img {
                     z-index: 10;
                     position: relative;
+
+                    @media (max-width: $md) {
+                        height: 180px;
+                    }
                 }
+
             }
         }
     }
 
     .logo-en-huisstijl {
         margin-top: -260px;
-        padding: 350px 0;
+        padding: 350px 40px;
         position: relative;
         color: $white;
+
+        @media (max-width: $md) {
+            padding: 200px 40px 200px;
+            margin-top: -160px;
+        }
+
+        @media (max-width: $sm) {
+            padding: 200px 20px 200px;
+        }
 
         &::after {
             z-index: -1;
@@ -40,25 +62,48 @@ body.page-template-diensten {
             right: 0;
             clip-path: polygon(0 0, 100% 150px, 100% calc(100% - 150px), 0% 100%);
 
+            @media (max-width: $md) {
+                clip-path: polygon(0 0, 100% 100px, 100% calc(100% - 100px), 0% 100%);
+            } 
+
         }
 
         &__inner {
             display: grid;
             margin: auto;
             max-width: 1200px;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: repeat(2, 1fr);
+
+            @media (max-width: $md) {
+                gap: 20px;
+            } 
+
+            @media (max-width: $sm) {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+            } 
 
             &--left {
                 display: flex;
                 justify-content: center;
+
+                @media (max-width: $sm) {
+                    grid-row: 2;
+                } 
                 
                 img {
                     align-self: center;
-                    width: 465px;
+                    max-width: 465px;
+                    width: 100%;
+                    height: auto; 
                 }
             }
 
             &--right {
+
+                @media (max-width: $sm) {
+                    grid-row: 1;
+                } 
 
                 p {
                     margin: 20px 0 40px;
@@ -69,14 +114,18 @@ body.page-template-diensten {
     }
 
     .websites {
-        padding: 50px 0;
+        padding: 50px 40px;
         position: relative;
 
         &__inner {
             display: grid;
             margin: auto;
             max-width: 1200px;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: repeat(2, 1fr);
+
+            @media (max-width: $md) {
+                gap: 20px;
+            } 
 
             &--left {
                 position: relative;
@@ -92,7 +141,9 @@ body.page-template-diensten {
                 
                 img {
                     align-self: center;
-                    width: 465px;
+                    max-width: 465px;
+                    width: 100%;
+                    height: auto; 
                 }
             }
         }
@@ -100,8 +151,12 @@ body.page-template-diensten {
 
     .mobiele-apps {
         color: $white;
-        padding: 250px 0 250px;
+        padding: 250px 40px;
         position: relative;
+
+        @media (max-width: $md) {
+            padding: 150px 40px 200px;
+        }
 
         &::after {
             z-index: -1;
@@ -113,6 +168,10 @@ body.page-template-diensten {
             left: 0;
             right: 0;
             clip-path: polygon(0 150px, 100% 0%, 100% 100%, 0% 100%);
+            
+            @media (max-width: $md) {
+                clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%);
+            } 
 
         }
 
@@ -120,7 +179,11 @@ body.page-template-diensten {
             display: grid;
             margin: auto;
             max-width: 1200px;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: repeat(2, 1fr);
+
+            @media (max-width: $md) {
+                gap: 20px;
+            } 
 
             &--left {
                 display: flex;
@@ -128,7 +191,9 @@ body.page-template-diensten {
 
                 img {
                     align-self: center;
-                    width: 465px;
+                    max-width: 465px;
+                    width: 100%;
+                    height: auto; 
                 }
             }
 

@@ -17,6 +17,7 @@
             <div class="left">
                 <img src="<?php the_field('verhaal_afbeelding') ?>" alt="">
             </div>
+            
             <div class="right">
                 <?php the_field('verhaal_content_top') ?>
             </div>

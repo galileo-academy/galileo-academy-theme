@@ -21,10 +21,14 @@
 	<div class="navbar-wrapper__bottom">
 		<div class="navbar-wrapper__bottom--inner">
 			<div class="nav semi-bold">
-				<div class="desktop-menu"><?php wp_nav_menu(["theme_location" => "primary"]); ?></div>	
+				<div class="desktop-menu"><?php wp_nav_menu(["theme_location" => "primary"]); ?></div>
 			</div>
-			<div class="header-cta">
-				<a href="/contact" class="cta header <?php if( is_page('contact') ) { echo "active"; } ?>"><?php the_field('header_cta', 'option') ?></a>
+			<div class="nav social-icons">
+				<?php if( have_rows('social_icons', 'options') ): ?>
+				<?php while( have_rows('social_icons', 'options') ):  the_row(); ?>
+				<a href="<?php the_sub_field('social_url', 'options') ?>" target="_blank"><?php the_sub_field('social_logo') ?></a>
+				<?php endwhile; ?>
+				<?php endif ?>
 			</div>
 		</div>
 	</div>

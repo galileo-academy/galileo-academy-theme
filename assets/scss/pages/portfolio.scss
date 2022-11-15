@@ -1,8 +1,12 @@
 body.page-template-portfolio {
 
     .hero {
-        padding: 100px 0 0;
+        padding: 100px 40px 0;
         position: relative;
+
+        @media (max-width: $md) {
+            padding: 50px 40px 0;
+        }
 
         &__inner {
             margin: auto;
@@ -18,6 +22,10 @@ body.page-template-portfolio {
                 img {
                     z-index: 10;
                     position: relative;
+
+                    @media (max-width: $md) {
+                        height: 180px
+                    }
                 }
             }
         }
@@ -26,9 +34,14 @@ body.page-template-portfolio {
     .intro {
         z-index: 1;
         margin-top: -220px;
-        padding: 300px 0 200px;
+        padding: 300px 40px 200px;
         position: relative;
         color: $white;
+
+        @media (max-width: $md) {
+            margin-top: -150px;
+            padding: 200px 40px 150px;
+        }
 
         &::after {
             z-index: -1;
@@ -40,6 +53,11 @@ body.page-template-portfolio {
             left: 0;
             right: 0;
             clip-path: polygon(0 0, 100% 150px, 100% calc(100% - 150px), 0% 100%);
+
+            @media (max-width: $md) {
+                clip-path: polygon(0 0, 100% 100px, 100% calc(100% - 100px), 0% 100%);
+            } 
+    
         }
 
         &__inner {
@@ -64,7 +82,7 @@ body.page-template-portfolio {
     .opdrachtgevers {
         z-index: 0;
         margin: -180px 0;
-        padding: 300px 0;
+        padding: 300px 40px;
         position: relative;
 
         &:after {
@@ -86,9 +104,22 @@ body.page-template-portfolio {
             margin: auto;
             text-align: center;
 
+            @media (max-width: $md) {
+                gap: 40px;
+            } 
+
             &--loop {
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+
+                @media (max-width: $md) {
+                    grid-template-columns: repeat(4, 1fr);
+                } 
+
+                @media (max-width: $sm) {
+                    grid-template-columns: repeat(2, 1fr);
+                } 
 
                 .project {
                     margin: auto;
@@ -100,8 +131,15 @@ body.page-template-portfolio {
                     justify-content: center;
                     align-items: center;
 
-                    img {
+                    @media (max-width: $md) {
+                        padding: 20px;
+                        height: 150px;
                         width: 150px;
+                    } 
+
+                    img {
+                        height: auto;
+                        width: 100%;
                         object-fit: contain;
                     }
                 }
@@ -112,8 +150,12 @@ body.page-template-portfolio {
     .cta-bottom {
         z-index: 1;
         position: relative;
-        padding: 300px 0 200px;
+        padding: 300px 40px 200px;
         color: $white;
+
+        @media (max-width: $md) {
+            padding: 200px 40px 150px;
+        }
 
         &::after {
             z-index: -1;
@@ -125,6 +167,10 @@ body.page-template-portfolio {
             left: 0;
             right: 0;
             clip-path: polygon(0 150px, 100% 0%, 100% 100%, 0% 100%);
+
+            @media (max-width: $md) {
+                clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%);
+            } 
         }
 
         &__inner {

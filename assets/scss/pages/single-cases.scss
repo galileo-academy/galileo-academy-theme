@@ -1,8 +1,12 @@
 body.single-cases {
 
     .hero {
-        padding: 100px 0 0;
+        padding: 100px 40px 0;
         position: relative;
+
+        @media (max-width: $md) {
+            padding: 50px 40px 0;
+        }
 
         &__inner {
             margin: auto;
@@ -23,6 +27,11 @@ body.single-cases {
                     position: relative;
                     bottom: -50px;
                     background-color: white;
+
+                    @media (max-width: $md) {
+                        height: auto;
+                        width: 350px;
+                    }
                 }
             }
         }
@@ -31,9 +40,14 @@ body.single-cases {
     .omschrijving {
         z-index: 1;
         margin-top: -200px;
-        padding: 350px 0 500px;
+        padding: 350px 40px 0px;
         position: relative;
         color: $white;
+
+        @media (max-width: $md) {
+            padding: 200px 40px 0px;
+            margin-top: -100px;
+        }
 
         &::after {
             z-index: -1;
@@ -45,6 +59,10 @@ body.single-cases {
             left: 0;
             right: 0;
             clip-path: polygon(0 0, 100% 150px, 100% calc( 100% - 150px), 0% 100%);
+
+            @media (max-width: $md) {
+                clip-path: polygon(0 0, 100% 100px, 100% calc( 100% - 100px), 0% 100%);
+            }
         }
 
         &__inner {
@@ -55,8 +73,8 @@ body.single-cases {
             &--content {
 
                 .omschrijving_screenshot {
-                    position: absolute;
-                    bottom: -150px;
+                    position: relative;
+                    bottom: -50px;
 
                     img {
                         width: 100%;
@@ -69,8 +87,8 @@ body.single-cases {
     }
 
     .project_process {
-        margin-top: -260px;
-        padding: 450px 0 200px;
+        margin-top: -350px;
+        padding: 450px 40px 200px;
         position: relative;
 
         &::after {
@@ -83,6 +101,10 @@ body.single-cases {
             left: 0;
             right: 0;
             clip-path: polygon(0 0, 100% 0, 100% calc( 100% - 150px), 0% 100%);
+
+            @media (max-width: $md) {
+                clip-path: polygon(0 0, 100% 0, 100% calc( 100% - 100px), 0% 100%);
+            }
 
         }
 
@@ -112,7 +134,11 @@ body.single-cases {
 
     .quotes {
         position: relative;
-        padding: 100px 0 300px;
+        padding: 100px 40px 300px;
+
+        @media (max-width: $md) {
+            padding: 50px 40px 250px;
+        }
 
         &__inner {
             margin: auto;
@@ -128,8 +154,12 @@ body.single-cases {
     .cta-bottom {
         margin-top: -200px;
         position: relative;
-        padding: 300px 0 200px;
+        padding: 300px 40px 200px;
         color: $white;
+
+        @media (max-width: $md) {
+            padding: 200px 40px 150px;
+        }
 
         &::after {
             z-index: -1;
@@ -141,6 +171,10 @@ body.single-cases {
             left: 0;
             right: 0;
             clip-path: polygon(0 150px, 100% 0%, 100% 100%, 0% 100%);
+
+            @media (max-width: $md) {
+                clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%);
+            }
         }
 
         &__inner {

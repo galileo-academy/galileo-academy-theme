@@ -3,12 +3,12 @@
     position: relative;
 
     &__top {
-        padding: 25px 0 10px 0;
+        padding: 25px 40px 10px;
         text-align: center;
     }
 
     &__bottom {
-        padding: 20px 0;
+        padding: 20px 10px;
         background-color: $yellow;
 
         &--inner {
@@ -18,29 +18,52 @@
             max-width: 1200px;
             justify-content: space-between;
 
-            #menu-header-menu {
+            .nav {
                 display: flex;
-                list-style-type: none;
                 gap: 50px;
 
-                li {
-                    display: inline;
-                    gap: 50px;
+                @media (max-width: $md) {
+                    gap: 25px;
+                }
 
-                    &.current-menu-item a {
+                i {
+                    color: $dark-grey;
+                    transition: color 0.2s ease-in-out;
+
+                    &:hover,
+                    &:focus {
                         color: $white;
                     }
+                }
 
-                    a {
-                        color: $dark-grey;
-                        text-transform: uppercase;
-                        font-weight: 600;
-                        transition: color 0.2s ease-in-out;
+                #menu-header-menu {
+                    display: flex;
+                    list-style-type: none;
+                    gap: 50px;
 
-                        &:hover,
-                        &:focus,
-                        &:active {
+                    @media (max-width: $md) {
+                        gap: 25px;
+                    }
+    
+                    li {
+                        display: inline;
+                        gap: 50px;
+    
+                        &.current-menu-item a {
                             color: $white;
+                        }
+    
+                        a {
+                            color: $dark-grey;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            transition: color 0.2s ease-in-out;
+    
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                color: $white;
+                            }
                         }
                     }
                 }

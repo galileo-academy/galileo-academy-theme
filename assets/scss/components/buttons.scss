@@ -23,10 +23,16 @@
 
 .footer {
     position: absolute;
-    top: -160px;
+    top: -175px;
     right: 0;
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
+
+    @media (max-width: $md) {
+        top: -130px;
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .intro-cta {
@@ -36,14 +42,27 @@
     left: 0;
     width: 240px;
     height: 240px;
+
+    @media (max-width: $md) {
+        bottom: -100px;
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .diensten-cta {
     z-index: 20;
     position: absolute;
     left: 0;
+    bottom: 100px;
     width: 240px;
     height: 240px;
+
+    @media (max-width: $md) {
+        bottom: 70px;
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .cta {
@@ -55,6 +74,10 @@
     border-radius: 500px;
     font-weight: 500;
     text-transform: uppercase;
+
+    @media (max-width: $md) {
+        font-size: 20px;
+    }
 }
 
 .button {
