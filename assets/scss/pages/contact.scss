@@ -132,6 +132,10 @@ body.page-template-contact {
             left: 0;
             right: 0;
             clip-path: polygon(0 150px, 100% 0, 100% calc(100% - 150px), 0% 100%);
+
+            @media (max-width: $md) {
+                clip-path: polygon(0 100px, 100% 0, 100% calc(100% - 100px), 0% 100%);
+            } 
         }
 
         &__inner {

@@ -86,10 +86,6 @@ body.page-template-diensten {
             &--left {
                 display: flex;
                 justify-content: center;
-
-                @media (max-width: $sm) {
-                    grid-row: 2;
-                } 
                 
                 img {
                     align-self: center;
@@ -100,10 +96,6 @@ body.page-template-diensten {
             }
 
             &--right {
-
-                @media (max-width: $sm) {
-                    grid-row: 1;
-                } 
 
                 p {
                     margin: 20px 0 40px;

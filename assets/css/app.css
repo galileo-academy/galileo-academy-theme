@@ -235,8 +235,11 @@ a {
     padding: 25px 40px 10px;
     text-align: center; }
   .navbar-wrapper__bottom {
-    padding: 20px 10px;
+    padding: 20px 20px;
     background-color: #FFBE55; }
+    @media (max-width: 767px) {
+      .navbar-wrapper__bottom {
+        padding: 20px; } }
     .navbar-wrapper__bottom--inner {
       position: relative;
       display: flex;
@@ -254,25 +257,91 @@ a {
           transition: color 0.2s ease-in-out; }
           .navbar-wrapper__bottom--inner .nav i:hover, .navbar-wrapper__bottom--inner .nav i:focus {
             color: #fff; }
-        .navbar-wrapper__bottom--inner .nav #menu-header-menu {
+        @media (max-width: 767px) {
+          .navbar-wrapper__bottom--inner .nav .desktop-menu {
+            display: none; } }
+        .navbar-wrapper__bottom--inner .nav .desktop-menu #menu-header-menu {
           display: flex;
           list-style-type: none;
           gap: 50px; }
           @media (max-width: 1024px) {
-            .navbar-wrapper__bottom--inner .nav #menu-header-menu {
+            .navbar-wrapper__bottom--inner .nav .desktop-menu #menu-header-menu {
               gap: 25px; } }
-          .navbar-wrapper__bottom--inner .nav #menu-header-menu li {
+          .navbar-wrapper__bottom--inner .nav .desktop-menu #menu-header-menu li {
             display: inline;
             gap: 50px; }
-            .navbar-wrapper__bottom--inner .nav #menu-header-menu li.current-menu-item a {
+            .navbar-wrapper__bottom--inner .nav .desktop-menu #menu-header-menu li.current-menu-item a {
               color: #fff; }
-            .navbar-wrapper__bottom--inner .nav #menu-header-menu li a {
+            .navbar-wrapper__bottom--inner .nav .desktop-menu #menu-header-menu li a {
               color: #17181B;
               text-transform: uppercase;
               font-weight: 600;
               transition: color 0.2s ease-in-out; }
-              .navbar-wrapper__bottom--inner .nav #menu-header-menu li a:hover, .navbar-wrapper__bottom--inner .nav #menu-header-menu li a:focus, .navbar-wrapper__bottom--inner .nav #menu-header-menu li a:active {
+              .navbar-wrapper__bottom--inner .nav .desktop-menu #menu-header-menu li a:hover, .navbar-wrapper__bottom--inner .nav .desktop-menu #menu-header-menu li a:focus, .navbar-wrapper__bottom--inner .nav .desktop-menu #menu-header-menu li a:active {
                 color: #fff; }
+        .navbar-wrapper__bottom--inner .nav .mobile-button-container {
+          cursor: pointer;
+          position: absolute;
+          top: -7px;
+          left: 0px; }
+          @media (min-width: 768px) {
+            .navbar-wrapper__bottom--inner .nav .mobile-button-container {
+              display: none; } }
+          .navbar-wrapper__bottom--inner .nav .mobile-button-container .mobile-button {
+            width: 30px; }
+          .navbar-wrapper__bottom--inner .nav .mobile-button-container .mobile-button:before,
+          .navbar-wrapper__bottom--inner .nav .mobile-button-container .mobile-button:after,
+          .navbar-wrapper__bottom--inner .nav .mobile-button-container .mobile-button div {
+            background: #17181B;
+            content: "";
+            display: block;
+            height: 4px;
+            margin: 7px 0; }
+        .navbar-wrapper__bottom--inner .nav .mobile-menu-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background-color: #FFBE55; }
+          .navbar-wrapper__bottom--inner .nav .mobile-menu-container .open-menu-button {
+            position: absolute;
+            width: 30px;
+            top: 150px;
+            left: 30px; }
+            .navbar-wrapper__bottom--inner .nav .mobile-menu-container .open-menu-button:before, .navbar-wrapper__bottom--inner .nav .mobile-menu-container .open-menu-button:after {
+              content: '';
+              position: absolute;
+              display: block;
+              width: 4px;
+              height: 30px;
+              background: #17181B; }
+            .navbar-wrapper__bottom--inner .nav .mobile-menu-container .open-menu-button:before {
+              transform: rotate(-45deg); }
+            .navbar-wrapper__bottom--inner .nav .mobile-menu-container .open-menu-button:after {
+              transform: rotate(45deg); }
+          .navbar-wrapper__bottom--inner .nav .mobile-menu-container .mobile-menu {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center; }
+            .navbar-wrapper__bottom--inner .nav .mobile-menu-container .mobile-menu .menu-header-menu-container ul {
+              padding-inline-start: 0px; }
+              .navbar-wrapper__bottom--inner .nav .mobile-menu-container .mobile-menu .menu-header-menu-container ul .current-menu-item a {
+                color: #fff !important; }
+              .navbar-wrapper__bottom--inner .nav .mobile-menu-container .mobile-menu .menu-header-menu-container ul li {
+                margin: 24px 0px; }
+              .navbar-wrapper__bottom--inner .nav .mobile-menu-container .mobile-menu .menu-header-menu-container ul a {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 32px;
+                color: #fff;
+                text-decoration: none; }
+      .navbar-wrapper__bottom--inner .closed {
+        display: none; }
+      .navbar-wrapper__bottom--inner .open {
+        display: block; }
       .navbar-wrapper__bottom--inner .header-cta {
         position: relative; }
 
@@ -372,6 +441,9 @@ body.page-template-contact .contactform {
     left: 0;
     right: 0;
     clip-path: polygon(0 150px, 100% 0, 100% calc(100% - 150px), 0% 100%); }
+    @media (max-width: 1024px) {
+      body.page-template-contact .contactform::after {
+        clip-path: polygon(0 100px, 100% 0, 100% calc(100% - 100px), 0% 100%); } }
   body.page-template-contact .contactform__inner {
     max-width: 700px;
     margin: auto; }
@@ -505,17 +577,11 @@ body.page-template-diensten .logo-en-huisstijl {
     body.page-template-diensten .logo-en-huisstijl__inner--left {
       display: flex;
       justify-content: center; }
-      @media (max-width: 767px) {
-        body.page-template-diensten .logo-en-huisstijl__inner--left {
-          grid-row: 2; } }
       body.page-template-diensten .logo-en-huisstijl__inner--left img {
         align-self: center;
         max-width: 465px;
         width: 100%;
         height: auto; }
-    @media (max-width: 767px) {
-      body.page-template-diensten .logo-en-huisstijl__inner--right {
-        grid-row: 1; } }
     body.page-template-diensten .logo-en-huisstijl__inner--right p {
       margin: 20px 0 40px; }
 

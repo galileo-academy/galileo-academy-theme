@@ -28,4 +28,16 @@ document.addEventListener("DOMContentLoaded",function() {
         });
     }
 
+    $hamburger_closed = document.querySelector('.mobile-button-container');
+    $hamburger_open = document.querySelector('.open-menu-button');
+    $hamburger_closed.addEventListener('click', function()  {
+        document.querySelector('.mobile-menu-container').classList.remove('closed');
+        document.querySelector('.mobile-menu-container').classList.add('open');
+    });
+
+    $hamburger_open.addEventListener('click', function()  {
+        document.querySelector('.mobile-menu-container').classList.add('closed');
+        document.querySelector('.mobile-menu-container').classList.remove('open');
+    });
+
 });

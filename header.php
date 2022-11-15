@@ -22,6 +22,17 @@
 		<div class="navbar-wrapper__bottom--inner">
 			<div class="nav semi-bold">
 				<div class="desktop-menu"><?php wp_nav_menu(["theme_location" => "primary"]); ?></div>
+				<div class="mobile-button-container">
+					<div class="mobile-button">
+						<div></div>
+					</div>
+				</div>
+				<div class="mobile-menu-container closed">
+					<div class="open-menu-button">
+						<div></div>
+					</div>
+					<div class="mobile-menu"><?php wp_nav_menu(["theme_location" => "primary"]); ?></div>
+				</div>
 			</div>
 			<div class="nav social-icons">
 				<?php if( have_rows('social_icons', 'options') ): ?>
