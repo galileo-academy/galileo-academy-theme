@@ -42,7 +42,7 @@
 
                 .desktop-menu {
 
-                    @media (max-width: $sm) {
+                    @media (max-width: $md) {
                         display: none;
                     }
 
@@ -50,10 +50,6 @@
                         display: flex;
                         list-style-type: none;
                         gap: 50px;
-    
-                        @media (max-width: $md) {
-                            gap: 25px;
-                        }
         
                         li {
                             display: inline;
@@ -84,9 +80,8 @@
                     cursor: pointer;
                     position: absolute;
                     top: -7px;
-                    left: 0px;
     
-                    @media (min-width: #{$sm + 1px}) {
+                    @media (min-width: #{$md + 1px}) {
                         display: none;
                     }
     
@@ -103,17 +98,32 @@
                     height: 4px;
                     margin: 7px 0;
                     }
-    
+                    
+                    &.clicked {
+                        
+                        .mobile-button:before,
+                        .mobile-button:after,
+                        .mobile-button div {
+                            background: $white;
+                            content: "";
+                            display: block;
+                            height: 4px;
+                            margin: 7px 0;
+                        }
+                    }
+   
                 }
     
                 .mobile-menu-container {
+                    overflow: hidden;
                     z-index: 400;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
+                    position: absolute;
+                    top: 44px;
+                    left: -20px;
                     width: 100vw;
-                    height: 100vh;
+                    max-height: 0;
                     background-color: $yellow;
+                    transition: max-height 0.5s ease-in-out;
     
                     .open-menu-button {
                         position: absolute;
@@ -121,28 +131,11 @@
                         top: 20px;
                         left: 33px;
     
-                        &:before,
-                        &:after {
-                          content: '';
-                          position: absolute;
-                          display: block;
-                          width: 4px;
-                          height: 30px;
-                          background: $dark-grey;
-                        }
-    
-                        &:before {
-                            transform: rotate(-45deg);
-                        }
-    
-                        &:after {
-                            transform: rotate(45deg);
-                        }
+
                     }
     
                     .mobile-menu {
                         display: flex;
-                        height: 100vh;
                         justify-content: center;
                         align-items: center;
                         text-align: left;

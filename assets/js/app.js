@@ -12,6 +12,24 @@ document.addEventListener("DOMContentLoaded",function() {
         },
     });
 
+    const swiper_diensten = new Swiper('.swiper-diensten', {
+      // Optional parameters
+      speed: 500,
+      loop: true,
+      effect: 'fade',
+      autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.diensten-right',
+        prevEl: '.diensten-left',
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+  });
+
     let acc = document.getElementsByClassName("accordion");
     let i;
 
@@ -28,16 +46,19 @@ document.addEventListener("DOMContentLoaded",function() {
         });
     }
 
-    $hamburger_closed = document.querySelector('.mobile-button-container');
-    $hamburger_open = document.querySelector('.open-menu-button');
-    $hamburger_closed.addEventListener('click', function()  {
-        document.querySelector('.mobile-menu-container').classList.remove('closed');
-        document.querySelector('.mobile-menu-container').classList.add('open');
-    });
-
-    $hamburger_open.addEventListener('click', function()  {
-        document.querySelector('.mobile-menu-container').classList.add('closed');
-        document.querySelector('.mobile-menu-container').classList.remove('open');
+    $mobile_button = document.querySelector('.mobile-button-container');
+    $mobile_menu = document.querySelector('.mobile-menu-container');
+    $mobile_button.addEventListener('click', function()  {
+      if( $mobile_menu.classList.contains("open") ) {
+        $mobile_button.classList.remove("clicked");
+        $mobile_menu.classList.remove("open");
+        document.querySelector('.mobile-menu-container').style.maxHeight = null;
+      } else {
+        $mobile_button.classList.add("clicked");
+        $mobile_menu.classList.add("open");
+        document.querySelector('.mobile-menu-container').style.maxHeight = '100vh';
+      }
+        
     });
 
 });

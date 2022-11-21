@@ -8,6 +8,10 @@ body.single-diensten {
             padding: 50px 40px 0;
         }
 
+        @media (max-width: $sm) {
+            padding: 50px 20px 0;
+        }
+
         &__inner {
             margin: auto;
             max-width: 1200px;
@@ -29,6 +33,11 @@ body.single-diensten {
                         height: auto;
                         width: 380px;
                     }
+
+                    @media (max-width: $sm) {
+                        height: auto;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -46,6 +55,11 @@ body.single-diensten {
             margin-top: -180px;
         }
 
+        @media (max-width: $md) {
+            padding: 250px 20px 150px;
+            margin-top: -180px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -59,6 +73,10 @@ body.single-diensten {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 0, 100% 100px, 100% 100%, 0% calc( 100% - 100px));
+            }
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 0, 100% 50px, 100% 100%, 0% calc( 100% - 50px));
             }
         }
 
@@ -86,6 +104,10 @@ body.single-diensten {
                     display: inline-block;
                     margin-top: 40px;
                     width: 400px;
+
+                    @media (max-width: $sm) {
+                        width: 100%;
+                    }
                 }
 
             }
@@ -101,6 +123,10 @@ body.single-diensten {
             padding: 200px 40px 150px;
         }
 
+        @media (max-width: $md) {
+            padding: 200px 20px 150px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -114,6 +140,10 @@ body.single-diensten {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 0, 100% 100px, 100% 100%, 0% calc( 100% - 100px));
+            }
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 0, 100% 50px, 100% 100%, 0% calc( 100% - 50px));
             }
         }
 
@@ -133,6 +163,10 @@ body.single-diensten {
                 grid-template-columns: 1fr 1fr;
                 gap: 20px;
                 row-gap: 30px;
+
+                @media (max-width: $sm) {
+                    grid-template-columns: 1fr;
+                }
             }
         }
     }
@@ -207,6 +241,10 @@ body.single-diensten {
             padding: 200px 40px 150px;
         }
 
+        @media (max-width: $sm) {
+            padding: 150px 20px 150px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -220,6 +258,10 @@ body.single-diensten {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%);
+            }
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 50px, 100% 0%, 100% 100%, 0% 100%);
             }
         }
 

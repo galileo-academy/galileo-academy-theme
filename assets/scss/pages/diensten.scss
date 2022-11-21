@@ -42,7 +42,7 @@ body.page-template-diensten {
 
     .logo-en-huisstijl {
         margin-top: -260px;
-        padding: 350px 40px;
+        padding: 350px 40px 300px;
         position: relative;
         color: $white;
 
@@ -52,7 +52,8 @@ body.page-template-diensten {
         }
 
         @media (max-width: $sm) {
-            padding: 200px 20px 200px;
+            margin-top: -100px;
+            padding: 150px 20px 150px;
         }
 
         &::after {
@@ -69,6 +70,10 @@ body.page-template-diensten {
             @media (max-width: $md) {
                 clip-path: polygon(0 0, 100% 100px, 100% calc(100% - 100px), 0% 100%);
             } 
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 0, 100% 50px, 100% calc(100% - 50px), 0% 100%);
+            }
 
         }
 
@@ -113,6 +118,10 @@ body.page-template-diensten {
         padding: 50px 40px;
         position: relative;
 
+        @media (max-width: $sm) {
+            padding: 50px 20px;
+        } 
+
         &__inner {
             display: grid;
             margin: auto;
@@ -123,8 +132,17 @@ body.page-template-diensten {
                 gap: 20px;
             } 
 
+            @media (max-width: $sm) {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            } 
+
             &--left {
                 position: relative;
+
+                @media (max-width: $sm) {
+                    grid-row: 2;
+                } 
 
                 p {
                     margin: 20px 0 40px;
@@ -154,6 +172,10 @@ body.page-template-diensten {
             padding: 150px 40px 200px;
         }
 
+        @media (max-width: $sm) {
+            padding: 150px 20px 150px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -169,6 +191,10 @@ body.page-template-diensten {
                 clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%);
             } 
 
+            @media (max-width: $sm) {
+                clip-path: polygon(0 50px, 100% 0%, 100% 100%, 0% 100%);
+            } 
+
         }
 
         &__inner {
@@ -179,6 +205,10 @@ body.page-template-diensten {
 
             @media (max-width: $md) {
                 gap: 20px;
+            } 
+
+            @media (max-width: $sm) {
+                grid-template-columns: 1fr;
             } 
 
             &--left {

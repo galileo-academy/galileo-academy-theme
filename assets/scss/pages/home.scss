@@ -1,15 +1,55 @@
 body.page-template.home {
 
+    .hero-mobiel {
+        padding: 0 20px;
+        position: relative;
+        margin-top: -100px;
+
+        @media (min-width: #{$sm + 1}) {
+            display: none;
+        }
+
+        &__inner {
+            position: relative;
+            display: grid;
+            margin: auto;
+            max-width: 1200px;
+            grid-template-columns: 1fr;
+            bottom: -100px;
+
+            .quote {
+                text-align: center;
+            }
+
+            img {
+                z-index: 1;
+                position: relative;
+                display: block;
+                width: 120%;
+                max-width: 700px;
+                z-index: 10;
+            }
+        }
+    }
+
     .hero {
         padding: 0 40px;
         margin-top: -100px;
         position: relative;
+
+        @media (max-width: $sm) {
+            display: none;
+        }
 
         &__inner {
             display: grid;
             margin: auto;
             max-width: 1200px;
             grid-template-columns: 50% 50%;
+            
+            @media (max-width: $sm) {
+                grid-template-columns: 1fr;
+            }
 
             &--left {
                 position: relative;
@@ -17,6 +57,10 @@ body.page-template.home {
                 flex-flow: column;
                 align-items: flex-start;
                 justify-content: center;
+                
+                @media (max-width: $sm) {
+                    position: static;
+                }
             }
 
             &--right {
@@ -32,6 +76,10 @@ body.page-template.home {
                     @media (max-width: $md) {
                         bottom: -125px;
                     }
+
+                    @media (max-width: $sm) {
+                        bottom: -100px;
+                    }
                 }
             }
         }
@@ -40,11 +88,15 @@ body.page-template.home {
     .diensten {
         z-index: 1;
         position: relative;
-        padding: 0 0 300px;
+        padding: 0 0 200px;
         overflow: visible;
 
         @media (max-width: $md) {
             padding: 0 0 150px;
+        }
+
+        @media (max-width: $sm) {
+            display: none;
         }
         
         .intro {
@@ -57,6 +109,11 @@ body.page-template.home {
             @media (max-width: $md) {
                 padding: 150px 40px 150px;
                 clip-path: polygon(0 0, 100% 100px, 100% 100%, 0 calc(100% - 100px));
+            }
+
+            @media (max-width: $sm) {
+                padding: 150px 20px 150px;
+                clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 calc(100% - 50px));
             }
 
             &__inner {
@@ -93,6 +150,12 @@ body.page-template.home {
                 clip-path: polygon(0 100px, 100% 0%, 100% calc(100% - 100px), 0% 100%);
             }
 
+            @media (max-width: $sm) {
+                padding: 150px 20px 150px;
+                clip-path: polygon(0 50px, 100% 0%, 100% calc(100% - 50px), 0% 100%);
+            }
+
+
         }
 
         &__inner {
@@ -104,6 +167,11 @@ body.page-template.home {
             margin: auto;
             max-width: 1200px;
 
+            @media (max-width: $sm) {
+                padding: 40px 0 0;
+            }
+
+
             &--diensten {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
@@ -111,6 +179,10 @@ body.page-template.home {
 
                 @media (max-width: $md) {
                     gap: 0;
+                }
+
+                @media (max-width: $sm) {
+                    grid-template-columns: 1fr;
                 }
 
                 .dienst {
@@ -123,6 +195,10 @@ body.page-template.home {
 
                     @media (max-width: $md) {
                         padding: 0 40px;
+                    }
+
+                    @media (max-width: $sm) {
+                        padding: 0 20px;
                     }
 
                     .image-box {
@@ -144,6 +220,124 @@ body.page-template.home {
                     }
                 }
             }
+
+            &--meer {
+                position: relative;
+
+                .button {
+                    padding: 15px 20px;
+                    width: 100%;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .diensten-mobiel {
+        position: relative;
+
+        @media (min-width: #{$sm + 1}) {
+            display: none;
+        }
+
+        .intro {
+            z-index: 2;
+            color: $white;
+            padding: 100px 20px 100px;
+            background-color: $medium-grey;
+            clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 calc(100% - 50px));
+
+            &__inner {
+                position: relative;
+                max-width: 1200px;
+                margin: auto;
+            }
+        }
+
+        &::before {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: $yellow;
+            clip-path: polygon(0 150px, 100% 0%, 100% calc(100% - 150px), 0% 100%);
+
+            @media (max-width: $md) {
+                clip-path: polygon(0 100px, 100% 0%, 100% calc(100% - 100px), 0% 100%);
+            }
+
+            @media (max-width: $sm) {
+                padding: 150px 20px 150px;
+                clip-path: polygon(0 50px, 100% 0%, 100% calc(100% - 50px), 0% 100%);
+            }
+
+
+        }
+
+        &__inner {
+            position: relative;
+            max-width: 1200px;
+            padding: 50px 20px 100px;
+
+            &--heading {
+                text-align: center;
+            }
+
+            &--meer {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .swiper-diensten {
+                position: relative;
+                padding: 50px 60px;
+
+                .swiper-slide.dienst {
+                    visibility: hidden;
+                }
+    
+                .swiper-slide-active.dienst {
+                    visibility: visible;
+                }
+
+                .swiper-pagination-bullet {
+                    height: 15px;
+                    width: 15px;
+                }
+    
+                .swiper-pagination-bullet-active {
+                    background-color: $dark-grey;
+                }
+
+                .swiper-button-prev {
+                    color: $dark-grey;
+                }
+                
+                .swiper-button-next {
+                    color: $dark-grey;
+                }
+
+                .dienst {
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 18px;
+
+                    .image-box {
+                        background-color: white;
+                        border-radius: 100px;
+                        padding: 35px 39px;
+
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -151,6 +345,10 @@ body.page-template.home {
         padding: 0 40px;
         z-index: 2;
         position: relative;
+
+        @media (max-width: $md) {
+            padding: 0 20px;
+        }
 
         &__inner {
             padding: 100px 0;
@@ -180,18 +378,17 @@ body.page-template.home {
                         left: 0;
                         right: 0;
                     }
+
+                    @media (max-width: $sm) {
+                        position: relative;
+                        max-width: 100%;
+                    }
                 }
 
                 @media (max-width: $md) {
                     text-align: center;
                     grid-row: 2;
                 }
-            }
-
-            &--right {
-                display: flex;
-                flex-flow: column;
-                gap: 20px;
             }
         }
     }
@@ -206,6 +403,11 @@ body.page-template.home {
             padding: 250px 40px 150px;
         }
 
+        @media (max-width: $sm) {
+            margin-top: -150px;
+            padding: 200px 20px 150px;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -218,6 +420,10 @@ body.page-template.home {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 0, 100% 100px, 100% 100%, 0% 100%);
+            }
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 0, 100% 50px, 100% 100%, 0% 100%);
             }
         }
 

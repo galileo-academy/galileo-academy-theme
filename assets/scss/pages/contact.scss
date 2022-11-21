@@ -9,6 +9,10 @@ body.page-template-contact {
             padding: 50px 40px 0;
         }   
 
+        @media (max-width: $sm) {
+            padding: 50px 20px 0;
+        }   
+
         &__inner {
             max-width: 1200px;
             margin: auto;
@@ -28,6 +32,11 @@ body.page-template-contact {
                         height: auto;
                         width: 385px;
                     } 
+
+                    @media (max-width: $sm) {
+                        height: auto;
+                        width: 100%;
+                    } 
                 }
             }
         }
@@ -45,6 +54,11 @@ body.page-template-contact {
             padding: 200px 40px 150px;
         } 
 
+        @media (max-width: $sm) {
+            margin-top: -100px;
+            padding: 150px 20px 150px;
+        } 
+
         &::after {
             z-index: -1;
             content: '';
@@ -59,6 +73,10 @@ body.page-template-contact {
             @media (max-width: $md) {
                 clip-path: polygon(0 100px, 100% 0%, 100% calc(100% - 100px), 0% 100%);
             }   
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 50px, 100% 0%, 100% calc(100% - 50px), 0% 100%);
+            } 
         }
 
         &__inner {
@@ -75,11 +93,20 @@ body.page-template-contact {
                 grid-template-columns: 1fr 1fr;
                 gap: 20px;  
 
+                @media (max-width: $sm) {
+                    row-gap: 40px;
+                    grid-template-columns: 1fr;
+                } 
+
                 .left {
                     display: flex;
                     position: relative;
                     flex-flow: column;
                     gap: 40px;
+
+                    @media (max-width: $sm) {
+                        grid-row: 2;
+                    } 
 
                     .contactgegevens {
                         display: grid;
@@ -105,7 +132,7 @@ body.page-template-contact {
                     width: 100%;
 
                     p {
-                        margin: 0;
+                        margin-top: 0;
                     }
                 }
             }
@@ -122,6 +149,10 @@ body.page-template-contact {
             padding: 250px 40px 250px;
         } 
 
+        @media (max-width: $sm) {
+            padding: 250px 20px 250px;
+        } 
+
         &::after {
             z-index: -1;
             content: '';
@@ -135,6 +166,10 @@ body.page-template-contact {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 100px, 100% 0, 100% calc(100% - 100px), 0% 100%);
+            } 
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 50px, 100% 0, 100% calc(100% - 50px), 0% 100%);
             } 
         }
 
@@ -153,10 +188,19 @@ body.page-template-contact {
                 align-items: center;
                 justify-content: center;
 
+                div {
+                    width: 100%;
+                }
+
                 form {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     gap: 20px;
+
+                    @media (max-width: $sm) {
+                        display: flex;
+                        flex-flow: column;
+                    } 
 
                     input,
                     select,
@@ -205,6 +249,10 @@ body.page-template-contact {
             padding: 150px 40px 100px;
         } 
 
+        @media (max-width: $sm) {
+            padding: 150px 20px 100px;
+        } 
+
         &::after {
             z-index: -1;
             content: '';
@@ -219,6 +267,10 @@ body.page-template-contact {
             @media (max-width: $md) {
                 clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%);
             }  
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 50px, 100% 0%, 100% 100%, 0% 100%);
+            } 
         }
 
         &__inner {

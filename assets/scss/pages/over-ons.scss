@@ -31,7 +31,7 @@ body.page-template-over-ons {
                         width: 380px;
                     }
 
-                    @media (max-width: $md) {
+                    @media (max-width: $sm) {
                         width: 100%;
                     }
                 }
@@ -51,6 +51,11 @@ body.page-template-over-ons {
             padding: 150px 40px 100px;
         }
 
+        @media (max-width: $md) {
+            margin-top: -110px;
+            padding: 150px 20px 100px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -64,6 +69,10 @@ body.page-template-over-ons {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 calc(100% - 100px));
+            }
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 calc(100% - 50px));
             }
         }
 
@@ -87,6 +96,10 @@ body.page-template-over-ons {
                 grid-template-columns: 40% 60%;
                 gap: 20px;
 
+                @media (max-width: $sm) {
+                    grid-template-columns: 1fr;
+                }
+
                 p {
                     margin-bottom: 20px;
                 }
@@ -94,6 +107,10 @@ body.page-template-over-ons {
                 .left {
                     display: flex;
                     justify-content: center;
+
+                    @media (max-width: $sm) {
+                        grid-row: 2;
+                    }
                 }
             }
 
@@ -102,6 +119,10 @@ body.page-template-over-ons {
                 display: grid;
                 grid-template-columns: 60% 40%;
                 gap: 20px;
+
+                @media (max-width: $sm) {
+                    grid-template-columns: 1fr;
+                }
 
                 p {
                     margin-bottom: 20px;
@@ -120,6 +141,10 @@ body.page-template-over-ons {
         margin-top: -180px;
         position: relative;
         padding: 200px 40px;
+
+        @media (max-width: $sm) {
+            padding: 200px 20px 100px;
+        }
 
         h1 {
             margin-bottom: 50px;
@@ -140,6 +165,10 @@ body.page-template-over-ons {
             @media (max-width: $md) {
                 clip-path: polygon(0 0, 100% 100px, 100% 100%, 0 calc(100% - 100px));
             }
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 calc(100% - 50px));
+            }
         }
 
         &__inner {
@@ -156,6 +185,10 @@ body.page-template-over-ons {
                 grid-template-columns: 50% 50%;
                 gap: 20px;
 
+                @media (max-width: $sm) {
+                    grid-template-columns: 1fr;
+                }
+
                 .right {
                     display: flex;
                     justify-content: center;
@@ -168,12 +201,20 @@ body.page-template-over-ons {
                 display: grid;
                 grid-template-columns: 50% 50%;
                 gap: 20px;
+
+                @media (max-width: $sm) {
+                    grid-template-columns: 1fr;
+                }
             }
         }
     }
 
     .team {
         padding: 50px 40px;
+
+        @media (max-width: $sm) {
+            padding: 50px 20px;
+        }
 
         &__inner {
             max-width: 1200px;
@@ -186,9 +227,13 @@ body.page-template-over-ons {
             &--content {
                 margin: 70px 0;
                 display: grid;
-                grid-template-columns: 50% 50%;
+                grid-template-columns: 1fr 1fr;
                 gap: 20px;
                 row-gap: 40px;
+
+                @media (max-width: $sm) {
+                    grid-template-columns: 1fr;
+                }
 
                 .teamslid {
                     display: flex;
@@ -222,6 +267,11 @@ body.page-template-over-ons {
             padding: 200px 40px 150px;
         }
 
+        @media (max-width: $sm) {
+            margin-top: -100px;
+            padding: 150px 20px 150px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -235,6 +285,10 @@ body.page-template-over-ons {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%);
+            }
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 50px, 100% 0%, 100% 100%, 0% 100%);
             }
         }
 

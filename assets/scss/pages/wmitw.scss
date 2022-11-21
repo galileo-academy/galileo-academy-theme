@@ -8,6 +8,10 @@ body.page-template-wmitw {
         @media (max-width: $md) {
             padding: 50px 40px 0;
         }   
+        
+        @media (max-width: $md) {
+            padding: 50px 20px 0;
+        }   
 
         &__inner {
             max-width: 1200px;
@@ -57,6 +61,11 @@ body.page-template-wmitw {
             margin-top: -150px;
         }
 
+        @media (max-width: $sm) {
+            padding: 200px 20px 100px;
+            margin-top: -150px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -71,6 +80,10 @@ body.page-template-wmitw {
             @media (max-width: $md) {
                 clip-path: polygon(0 0, 100% 100px, 100% calc( 100% - 100px), 0% 100%);
             }
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 0, 100% 50px, 100% calc( 100% - 50px), 0% 100%);
+            }
         }
 
         &__inner {
@@ -82,6 +95,18 @@ body.page-template-wmitw {
 
     .opleiden {
         padding: 50px 40px;
+
+        @media (max-width: $sm) {
+            padding: 50px 20px;
+        }
+
+        h1 {
+            position: relative;
+
+            @media (max-width: $sm) {
+                word-wrap: break-word;
+            }
+        }
 
         &__inner {
             max-width: 1200px;
@@ -96,6 +121,10 @@ body.page-template-wmitw {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
                 row-gap: 40px;
+
+                @media (max-width: $sm) {
+                    grid-template-columns: 100%;
+                }
             }
         }
     }
@@ -106,6 +135,10 @@ body.page-template-wmitw {
 
         @media (max-width: $md) {
             padding: 200px 40px 250px;
+        }
+
+        @media (max-width: $sm) {
+            padding: 150px 20px 250px;
         }
 
         &::after {
@@ -121,6 +154,10 @@ body.page-template-wmitw {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 100px, 100% 0%, 100% calc( 100% - 100px), 0% 100%);
+            }
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 50px, 100% 0%, 100% calc( 100% - 50px), 0% 100%);
             }
         }
 
@@ -166,6 +203,10 @@ body.page-template-wmitw {
             padding: 200px 40px 150px;
         }
 
+        @media (max-width: $sm) {
+            padding: 150px 20px 150px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -179,6 +220,10 @@ body.page-template-wmitw {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%);
+            }
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 50px, 100% 0%, 100% 100%, 0% 100%);
             }
         }
 

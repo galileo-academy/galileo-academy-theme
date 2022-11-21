@@ -8,6 +8,10 @@ body.single-cases {
             padding: 50px 40px 0;
         }
 
+        @media (max-width: $sm) {
+            padding: 50px 20px 0;
+        }
+
         &__inner {
             margin: auto;
             max-width: 1200px;
@@ -32,6 +36,13 @@ body.single-cases {
                         height: auto;
                         width: 350px;
                     }
+
+                    @media (max-width: $sm) {
+                        bottom: 0;
+                        height: auto;
+                        width: 100%;
+                        max-width: 350px;
+                    }
                 }
             }
         }
@@ -49,6 +60,10 @@ body.single-cases {
             margin-top: -100px;
         }
 
+        @media (max-width: $sm) {
+            padding: 150px 20px 0px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -62,6 +77,10 @@ body.single-cases {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 0, 100% 100px, 100% calc( 100% - 100px), 0% 100%);
+            }
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 0, 100% 50px, 100% calc( 100% - 50px), 0% 100%);
             }
         }
 
@@ -91,6 +110,10 @@ body.single-cases {
         padding: 450px 40px 200px;
         position: relative;
 
+        @media (max-width: $sm) {
+            padding: 450px 20px 150px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -104,6 +127,10 @@ body.single-cases {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 0, 100% 0, 100% calc( 100% - 100px), 0% 100%);
+            }
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 0, 100% 0, 100% calc( 100% - 50px), 0% 100%);
             }
 
         }
@@ -140,6 +167,10 @@ body.single-cases {
             padding: 50px 40px 250px;
         }
 
+        @media (max-width: $sm) {
+            padding: 50px 20px 150px;
+        }
+
         &__inner {
             margin: auto;
             max-width: 1200px;
@@ -161,6 +192,11 @@ body.single-cases {
             padding: 200px 40px 150px;
         }
 
+        @media (max-width: $sm) {
+            margin-top: -100px;
+            padding: 100px 20px 150px;
+        }
+
         &::after {
             z-index: -1;
             content: '';
@@ -174,6 +210,10 @@ body.single-cases {
 
             @media (max-width: $md) {
                 clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%);
+            }
+            
+            @media (max-width: $sm) {
+                clip-path: polygon(0 50px, 100% 0%, 100% 100%, 0% 100%);
             }
         }
 

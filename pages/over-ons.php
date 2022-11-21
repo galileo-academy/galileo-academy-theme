@@ -40,8 +40,7 @@
         <h1>Onze bedrijfscultuur</h1>
         <div class="bedrijfscultuur__inner--top">
             <div class="left">
-                <h2>MVO</h2>
-                <p>Galileo Academy geeft invulling aan haar maatschappelijke verantwoordelijkheid door mensen met een afstand tot de arbeidsmarkt op te leiden en een vaste contract aan te bieden.<br/><br/>Alle medewerkers van Galileo Academy zijn begonnen met een afstand tot de arbeidsmarkt en zijn hard op weg om die achterstand in te lopen. In tegenstelling tot andere sociale bedrijven, die bijvoorbeeld alleen mensen met een stoornis in het autistisch spectrum aannemen, stelt Galileo Academy zich open voor iedereen met een beperking. De enige voorwaarde is dat de medewerker intrinsiek gemotiveerd is om te werken en affiniteit heeft met digitalisering. <br/><br/>Galileo Academy heeft het certificaat voor de hoogste trede van de Prestatieladder Sociaal Ondernemen (PSO) behaald sinds 1 januari 2020.</p>
+                <?php the_field('mvo') ?>
             </div>
             <div class="right">
                 <img src="<?php the_field('bedrijfscultuur_afbeelding') ?>" alt="">
@@ -49,12 +48,10 @@
         </div>
         <div class="bedrijfscultuur__inner--bottom">
             <div  class="left">
-                <h2>G.O.E.D.</h2>
-                <p>Onze collega’s hebben het uitstekend naar hun zin binnen ons bedrijf. Galileo Academy biedt haar mensen een veilige en prettige (werk)omgeving waarin ze zowel persoonlijke alsook vakinhoudelijke ontwikkeling en groei kunnen realiseren. Daarbij wordt er rekening gehouden met ieders ambities, mogelijkheden en onmogelijkheden.<br/><br/> Daarnaast hanteert Galileo Academy de bedrijfscultuur GOED (Gelijkwaardig, Open, Eerlijk en Duidelijk).</p>
+                <?php the_field('goed_content') ?>
             </div>
             <div  class="right">
-                <h2>Continue ontwikkeling</h2>
-                <p>Ons werk en de wereld waarin we werken verandert snel dus is “permanente educatie” bij ons een vanzelfsprekende zaak. Onze medewerkers zijn geselecteerd op hun innerlijke drive zichzelf verder te willen ontwikkelen, gefaciliteerd door Galileo Academy.<br/>Galileo Academy biedt maatwerk in de professionele ontwikkeling van haar medewerkers. De Human Factor is de bepalende factor in het succes van Galileo Academy.<br/><br/>Galileo Academy ziet de competenties van haar medewerkers niet alleen als de kern van het bedrijf maar ook de invulling van haar commerciële propositie: er bestaat dus ook een 1 op 1 verbinding tussen de de competenties van onze medewerkers en de producten en diensten die Galileo Academy aanbiedt.</p>
+                <?php the_field('ontwikkeling_content') ?>
             </div>
         </div>
     </div>

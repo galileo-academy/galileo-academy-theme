@@ -27,10 +27,7 @@
 						<div></div>
 					</div>
 				</div>
-				<div class="mobile-menu-container closed">
-					<div class="open-menu-button">
-						<div></div>
-					</div>
+				<div class="mobile-menu-container">
 					<div class="mobile-menu"><?php wp_nav_menu(["theme_location" => "primary"]); ?></div>
 				</div>
 			</div>

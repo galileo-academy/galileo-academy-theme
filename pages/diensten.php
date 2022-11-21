@@ -42,7 +42,7 @@
         </div>
         <div class="mobiele-apps__inner--right">
             <?php the_field('mobiele_apps_content'); ?>
-            <a href="<?php the_permalink('283') ?>" class="button yellow">Meer info over websites</a>
+            <a href="<?php the_permalink('283') ?>" class="button yellow">Meer info over Apps</a>
         </div>
     </div>
 </div>

@@ -48,6 +48,14 @@
         width: 150px;
         height: 150px;
     }
+
+    @media (max-width: $sm) {
+        z-index: 10;
+        left: 0px;
+        bottom: 5px;
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .diensten-cta {
@@ -60,6 +68,12 @@
 
     @media (max-width: $md) {
         bottom: 70px;
+        width: 150px;
+        height: 150px;
+    }
+
+    @media (max-width: $sm) {
+        bottom: 0px;
         width: 150px;
         height: 150px;
     }

@@ -15,7 +15,7 @@
         <div class="intro__inner--content">
             <?php the_field('intro_content') ?>
             <div>
-                <a href="" class="button yellow">Contact opnemen</a>
+                <a href="/contact" class="button yellow">Contact opnemen</a>
             </div>
         </div>
     </div>
