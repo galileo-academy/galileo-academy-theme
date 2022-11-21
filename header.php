@@ -15,7 +15,7 @@
 <div class="navbar-wrapper">
 	<div class="navbar-wrapper__top">
 		<div class="navbar-wrapper__top--logo">
-			<img src="<?php the_field('primary_logo', 'options') ?>" height="70" />
+			<a href="/"><img src="<?php the_field('primary_logo', 'options') ?>" height="70" /></a>
 		</div>
 	</div>
 	<div class="navbar-wrapper__bottom">

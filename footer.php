@@ -2,7 +2,7 @@
     <div class="footer-wrapper">
         <div class="footer-wrapper__inner">
             <div class="footer-wrapper__inner--left">
-                <img src="<?php the_field('primary_logo', 'options') ?>" height="100" />
+                <a href="/"><img src="<?php the_field('primary_logo', 'options') ?>" height="100" /></a>
             </div>
             <div class="footer-wrapper__inner--right">
                 <?php the_field('bedrijfsgegevens', 'options') ?>
