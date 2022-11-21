@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/PixxelsRotterdam/Boilerplate#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^9.0.0",
     "browser-sync": "^2.27.9",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^5.1.5",
@@ -34,5 +34,6 @@
     "node-sass": "^7.0.3",
     "postcss-assets": "^6.0.0",
     "sass": "^1.49.9"
-  }
+  },
+  "dependencies": {}
 }
