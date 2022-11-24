@@ -121,20 +121,24 @@
 <div class="quotes">
     <?php
     if( have_rows('beoordelingen') ):
-    while ( have_rows('beoordelingen') ) : the_row();
     ?>
     <div class="quotes__inner">
-        <?php the_sub_field('content') ?>
-
-        <div class="quote-person">
-            <h3><?php the_sub_field('naam') ?></h3>
-            <p class="p-small"><?php the_sub_field('functie') ?> | <?php the_sub_field('bedrijf') ?></p>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <?php while ( have_rows('beoordelingen') ) : the_row(); ?>
+                <div class="swiper-slide">
+                    <blockquote><?php the_sub_field('content') ?></blockquote>
+                    <div class="quote-person">
+                        <h3><?php the_sub_field('naam') ?></h3>
+                        <p class="p-small"><?php the_sub_field('functie') ?> | <?php the_sub_field('bedrijf') ?></p>
+                    </div>
+                </div>
+                <?php endwhile; ?> 
+            </div>
         </div>
-        
         <a href="/portfolio" class="button yellow">Meer beoordelingen lezen</a>
     </div>
     <?php 
-    endwhile;
     endif;
     ?>
 </div>

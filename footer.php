@@ -6,7 +6,7 @@
             </div>
             <div class="footer-wrapper__inner--right">
                 <?php the_field('bedrijfsgegevens', 'options') ?>
-                <p>Privacy Policy | Algemene voorwaarden | 2022 © Galileo Academy, B.V.</p>
+                <p><a href="/privacy-policy">Privacy Policy</a> | 2022 © Galileo Academy, B.V.</p>
                 <a class="cta yellow footer" href="/contact">Contact opnemen</a>
             </div>
         </div>

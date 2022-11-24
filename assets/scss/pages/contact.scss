@@ -203,12 +203,22 @@ body.page-template-contact {
                     } 
 
                     input,
-                    select,
                     textarea {
                         border: none;
                         border-radius: 5px;
                         padding: 14px;
                         width: 100%;
+                    }
+
+                    select {
+                        padding: 14px;
+                        border-radius: 5px;
+                        width: 100%;
+                    }
+
+                    select,
+                    input[type="submit"] {
+                        height: 44px;
                     }
 
                     input[type="submit"] {
@@ -218,6 +228,7 @@ body.page-template-contact {
                         font-weight: 500;
                         text-transform: uppercase;
                         transition: background-color 0.3s ease-in-out;
+                        -webkit-appearance: none;
 
                         &:hover {
                             background-color: $blue-hover;
