@@ -1,6 +1,7 @@
 <?php
 /* Keep it as clean as possible in here, try to include classes instead of plain functions */
 require_once get_template_directory() . '/classes/class-uptop-setup.php';
+require_once get_template_directory() . '/classes/class-custom-login.php';
 
 $settings = [
     'woocommerce' => false,
@@ -10,3 +11,4 @@ $settings = [
 ];
 
 new UptopSetup($settings);
+new CustomLogin();

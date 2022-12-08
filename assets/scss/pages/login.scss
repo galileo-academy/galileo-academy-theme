@@ -1,0 +1,43 @@
+body.login {
+    overflow: hidden;
+    background: linear-gradient(0deg, rgba($color: #17181B, $alpha: 1.0), rgba($color: #222429, $alpha: 1.0) );
+    height: 100%;
+    background-image: url('../images/login-background.jpg');
+    background-size: cover;
+    box-shadow: inset 2000px 0 rgba($color: #fff, $alpha: 0.2);
+
+    div#login {
+        background-color: rgba($color: #fff, $alpha: 1);
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0 20px;
+        height: 100%;
+
+        h1 a {
+            background-image: url("../images/logo-small.png");
+        }
+
+        form#loginform {
+            background: none;
+            border: none;
+
+            input[type=submit] {
+                padding: 0 20px;
+                color: #222429;
+                border: none;
+                background-color: #FFBE55;
+            }
+
+            input[type=text],
+            input[type=password] {
+                font-size: 18px;
+                text-indent: 20px;
+                border-radius: 50px;
+            }
+
+        }
+        
+    }
+}

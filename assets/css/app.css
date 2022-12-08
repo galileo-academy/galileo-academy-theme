@@ -1480,6 +1480,118 @@ body.page-template-portfolio .cta-bottom {
       flex-flow: column;
       gap: 10px; }
 
+body.page-template-privacy-policy .intro {
+  padding: 100px 40px; }
+  @media (max-width: 1024px) {
+    body.page-template-privacy-policy .intro {
+      padding: 100px 40px 50px; } }
+  @media (max-width: 767px) {
+    body.page-template-privacy-policy .intro {
+      padding: 100px 20px 50px; } }
+  body.page-template-privacy-policy .intro__inner {
+    margin: auto;
+    max-width: 1200px; }
+    body.page-template-privacy-policy .intro__inner h1 {
+      text-align: center; }
+
+body.page-template-privacy-policy .privacy-policy {
+  position: relative;
+  padding: 0 40px; }
+  @media (max-width: 767px) {
+    body.page-template-privacy-policy .privacy-policy {
+      padding: 0 20px; } }
+  body.page-template-privacy-policy .privacy-policy__inner {
+    margin: auto;
+    max-width: 1200px; }
+    body.page-template-privacy-policy .privacy-policy__inner--block {
+      position: relative; }
+      body.page-template-privacy-policy .privacy-policy__inner--block ul {
+        padding: 0 0 0 40px; }
+        body.page-template-privacy-policy .privacy-policy__inner--block ul li {
+          font-weight: 300;
+          font-size: 18px; }
+          @media (max-width: 1024px) {
+            body.page-template-privacy-policy .privacy-policy__inner--block ul li {
+              font-size: 16px; } }
+
+body.page-template-privacy-policy .privacy-policy:nth-child(3),
+body.page-template-privacy-policy .privacy-policy:nth-child(6),
+body.page-template-privacy-policy .privacy-policy:nth-child(9) {
+  padding: 200px 40px 200px;
+  color: #fff; }
+  @media (max-width: 767px) {
+    body.page-template-privacy-policy .privacy-policy:nth-child(3),
+    body.page-template-privacy-policy .privacy-policy:nth-child(6),
+    body.page-template-privacy-policy .privacy-policy:nth-child(9) {
+      padding: 200px 20px 200px; } }
+  body.page-template-privacy-policy .privacy-policy:nth-child(3) a,
+  body.page-template-privacy-policy .privacy-policy:nth-child(6) a,
+  body.page-template-privacy-policy .privacy-policy:nth-child(9) a {
+    color: white; }
+  body.page-template-privacy-policy .privacy-policy:nth-child(3)::after,
+  body.page-template-privacy-policy .privacy-policy:nth-child(6)::after,
+  body.page-template-privacy-policy .privacy-policy:nth-child(9)::after {
+    z-index: -1;
+    content: '';
+    background-color: #222429;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-clip-path: polygon(0 100px, 100% 0, 100% calc(100% - 100px), 0 100%);
+            clip-path: polygon(0 100px, 100% 0, 100% calc(100% - 100px), 0 100%); }
+    @media (max-width: 767px) {
+      body.page-template-privacy-policy .privacy-policy:nth-child(3)::after,
+      body.page-template-privacy-policy .privacy-policy:nth-child(6)::after,
+      body.page-template-privacy-policy .privacy-policy:nth-child(9)::after {
+        -webkit-clip-path: polygon(0 50px, 100% 0, 100% calc(100% - 50px), 0 100%);
+                clip-path: polygon(0 50px, 100% 0, 100% calc(100% - 50px), 0 100%); } }
+
+body.page-template-privacy-policy .privacy-policy:nth-child(4),
+body.page-template-privacy-policy .privacy-policy:nth-child(7),
+body.page-template-privacy-policy .privacy-policy:nth-child(10) {
+  margin-top: -151px;
+  padding: 200px 40px 150px; }
+  @media (max-width: 767px) {
+    body.page-template-privacy-policy .privacy-policy:nth-child(4),
+    body.page-template-privacy-policy .privacy-policy:nth-child(7),
+    body.page-template-privacy-policy .privacy-policy:nth-child(10) {
+      padding: 200px 20px 150px; } }
+  body.page-template-privacy-policy .privacy-policy:nth-child(4)::after,
+  body.page-template-privacy-policy .privacy-policy:nth-child(7)::after,
+  body.page-template-privacy-policy .privacy-policy:nth-child(10)::after {
+    z-index: -1;
+    content: '';
+    background-color: #FFBE55;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-clip-path: polygon(0 100px, 100% 0, 100% calc(100% - 100px), 0 100%);
+            clip-path: polygon(0 100px, 100% 0, 100% calc(100% - 100px), 0 100%); }
+    @media (max-width: 767px) {
+      body.page-template-privacy-policy .privacy-policy:nth-child(4)::after,
+      body.page-template-privacy-policy .privacy-policy:nth-child(7)::after,
+      body.page-template-privacy-policy .privacy-policy:nth-child(10)::after {
+        -webkit-clip-path: polygon(0 50px, 100% 0, 100% calc(100% - 50px), 0 100%);
+                clip-path: polygon(0 50px, 100% 0, 100% calc(100% - 50px), 0 100%); } }
+
+body.page-template-privacy-policy .privacy-policy:nth-child(5),
+body.page-template-privacy-policy .privacy-policy:nth-child(8) {
+  padding: 50px 40px 50px; }
+  @media (max-width: 767px) {
+    body.page-template-privacy-policy .privacy-policy:nth-child(5),
+    body.page-template-privacy-policy .privacy-policy:nth-child(8) {
+      padding: 50px 20px 50px; } }
+
+body.page-template-privacy-policy .privacy-policy:nth-child(11) {
+  padding: 100px 40px 150px; }
+  @media (max-width: 767px) {
+    body.page-template-privacy-policy .privacy-policy:nth-child(11) {
+      padding: 100px 20px 150px; } }
+
 body.single-cases .hero {
   padding: 100px 40px 0;
   position: relative; }
@@ -1629,7 +1741,7 @@ body.single-cases .cta-bottom {
   @media (max-width: 767px) {
     body.single-cases .cta-bottom {
       margin-top: -100px;
-      padding: 100px 20px 150px; } }
+      padding: 150px 20px 150px; } }
   body.single-cases .cta-bottom::after {
     z-index: -1;
     content: '';
