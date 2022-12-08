@@ -333,7 +333,7 @@ a {
           overflow: hidden;
           z-index: 400;
           position: absolute;
-          top: 44px;
+          top: 43px;
           left: -20px;
           width: 100vw;
           max-height: 0;
@@ -525,19 +525,26 @@ body.page-template-contact .contactform {
             display: flex;
             flex-flow: column; } }
         body.page-template-contact .contactform__inner--content form input,
-        body.page-template-contact .contactform__inner--content form select,
         body.page-template-contact .contactform__inner--content form textarea {
           border: none;
           border-radius: 5px;
           padding: 14px;
           width: 100%; }
+        body.page-template-contact .contactform__inner--content form select {
+          padding: 14px;
+          border-radius: 5px;
+          width: 100%; }
+        body.page-template-contact .contactform__inner--content form select,
+        body.page-template-contact .contactform__inner--content form input[type="submit"] {
+          height: 44px; }
         body.page-template-contact .contactform__inner--content form input[type="submit"] {
           color: #fff;
           background-color: #1579C7;
           width: 50%;
           font-weight: 500;
           text-transform: uppercase;
-          transition: background-color 0.3s ease-in-out; }
+          transition: background-color 0.3s ease-in-out;
+          -webkit-appearance: none; }
           body.page-template-contact .contactform__inner--content form input[type="submit"]:hover {
             background-color: #1562A3; }
         body.page-template-contact .contactform__inner--content form label {
@@ -1009,7 +1016,7 @@ body.page-template.home .uniek {
   padding: 0 40px;
   z-index: 2;
   position: relative; }
-  @media (max-width: 1024px) {
+  @media (max-width: 767px) {
     body.page-template.home .uniek {
       padding: 0 20px; } }
   body.page-template.home .uniek__inner {
@@ -1079,6 +1086,22 @@ body.page-template.home .quotes {
     position: relative;
     margin: auto;
     max-width: 1200px; }
+    body.page-template.home .quotes__inner .swiper {
+      margin: 0;
+      position: relative; }
+    body.page-template.home .quotes__inner .swiper-slide blockquote,
+    body.page-template.home .quotes__inner .swiper-slide .quote-person {
+      opacity: 0;
+      display: block;
+      width: 100%;
+      -o-object-fit: contain;
+         object-fit: contain; }
+    body.page-template.home .quotes__inner .swiper-slide-active blockquote,
+    body.page-template.home .quotes__inner .swiper-slide-active .quote-person {
+      opacity: 1; }
+      body.page-template.home .quotes__inner .swiper-slide-active blockquote a,
+      body.page-template.home .quotes__inner .swiper-slide-active .quote-person a {
+        color: white; }
     body.page-template.home .quotes__inner .quote-person {
       margin: 20px 0 65px; }
 
@@ -1587,9 +1610,27 @@ body.page-template-privacy-policy .privacy-policy:nth-child(8) {
       padding: 50px 20px 50px; } }
 
 body.page-template-privacy-policy .privacy-policy:nth-child(11) {
-  padding: 100px 40px 150px; }
+  margin-top: -101px;
+  color: white;
+  padding: 150px 40px 150px; }
+  body.page-template-privacy-policy .privacy-policy:nth-child(11)::after {
+    z-index: -1;
+    content: '';
+    background-color: #222429;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%); }
+    @media (max-width: 767px) {
+      body.page-template-privacy-policy .privacy-policy:nth-child(11)::after {
+        -webkit-clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%); } }
   @media (max-width: 767px) {
     body.page-template-privacy-policy .privacy-policy:nth-child(11) {
+      margin-top: -51px;
       padding: 100px 20px 150px; } }
 
 body.single-cases .hero {
@@ -2126,6 +2167,9 @@ body.page-template-wmitw .quote {
     body.page-template-wmitw .quote__inner--content .swiper-slide-active blockquote,
     body.page-template-wmitw .quote__inner--content .swiper-slide-active h3 {
       opacity: 1; }
+      body.page-template-wmitw .quote__inner--content .swiper-slide-active blockquote a,
+      body.page-template-wmitw .quote__inner--content .swiper-slide-active h3 a {
+        color: white; }
 
 body.page-template-wmitw .cta-bottom {
   margin-top: -200px;

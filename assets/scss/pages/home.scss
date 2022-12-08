@@ -346,7 +346,7 @@ body.page-template.home {
         z-index: 2;
         position: relative;
 
-        @media (max-width: $md) {
+        @media (max-width: $sm) {
             padding: 0 20px;
         }
 
@@ -431,6 +431,28 @@ body.page-template.home {
             position: relative;
             margin: auto;
             max-width: 1200px;
+
+            .swiper {
+                margin: 0;
+                position: relative;
+            }
+        
+            .swiper-slide blockquote,
+            .swiper-slide .quote-person {
+            opacity: 0;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+            }
+
+            .swiper-slide-active blockquote,
+            .swiper-slide-active .quote-person {
+            opacity: 1;
+
+                a {
+                    color: white;
+                }
+            }
 
             .quote-person {
                 margin: 20px 0 65px;

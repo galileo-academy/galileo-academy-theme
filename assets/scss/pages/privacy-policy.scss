@@ -120,9 +120,28 @@ body.page-template-privacy-policy {
     }
 
     .privacy-policy:nth-child(11) {
-        padding: 100px 40px 150px;
+        margin-top: -101px;
+        color: white;
+        padding: 150px 40px 150px;
+
+        &::after {
+            z-index: -1;
+            content: '';
+            background-color: $medium-grey;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%);
+
+            @media (max-width: $sm) {
+                clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+            }
+        }
 
         @media (max-width: $sm) {
+            margin-top: -51px;
             padding: 100px 20px 150px;
         }
     }
