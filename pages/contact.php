@@ -44,12 +44,16 @@
     </div>
 </div>
 
-<div class="cta-bottom">
-    <div class="cta-bottom__inner">
-        <div class="cta-bottom__inner--content">
-            <?php the_field('section_content', 'option') ?>
-        </div>
-    </div>
+<div class="google-maps">
+    <iframe
+    class="gmaps-frame"
+    style="border:0"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCtuG5fXssq6mf8QoW1hqyIGp1fxGrT_0M
+    &q=Galileo+Academy,Capelle-aan-den-IJssel">
+    </iframe>
 </div>
 
 <?php get_footer(); ?>

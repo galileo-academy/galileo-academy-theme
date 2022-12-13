@@ -234,15 +234,15 @@ body.single-diensten {
 
     .cta-bottom {
         position: relative;
-        padding: 300px 0 200px;
+        padding: 250px 0 150px;
         color: $white;
 
         @media (max-width: $md) {
-            padding: 200px 40px 150px;
+            padding: 150px 40px 100px;
         }
 
         @media (max-width: $sm) {
-            padding: 150px 20px 150px;
+            padding: 150px 20px 100px;
         }
 
         &::after {
@@ -267,13 +267,33 @@ body.single-diensten {
 
         &__inner {
             margin: auto;
-            max-width: 950px;
+            max-width: 1200px;
             text-align: center;
 
             &--content {
                 display: flex;
                 flex-flow: column;
                 gap: 10px;
+
+                .swiper-cta {
+                    margin: 0;
+                    position: relative;
+                }
+            
+                .swiper-slide .slide-content {
+                opacity: 0;
+                display: block;
+                width: 100%;
+                object-fit: contain;
+                }
+    
+                .swiper-slide-active .slide-content {
+                opacity: 1;
+
+                    a {
+                        color: white;
+                    }
+                }
             }
         }
     }

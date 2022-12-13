@@ -13,22 +13,35 @@ document.addEventListener("DOMContentLoaded",function() {
     });
 
     const swiper_diensten = new Swiper('.swiper-diensten', {
-      // Optional parameters
-      speed: 500,
-      loop: true,
-      effect: 'fade',
-      autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '.diensten-right',
-        prevEl: '.diensten-left',
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-  });
+        // Optional parameters
+        speed: 500,
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.diensten-right',
+          prevEl: '.diensten-left',
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+    });
+
+    const swiper_cta = new Swiper('.swiper-cta', {
+        // Optional parameters
+        speed: 500,
+        loop: true,
+        effect: 'fade',
+      
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+    });
+
 
     let acc = document.getElementsByClassName("accordion");
     let i;

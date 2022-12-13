@@ -65,7 +65,19 @@
 <div class="cta-bottom">
     <div class="cta-bottom__inner">
         <div class="cta-bottom__inner--content">
-            <?php the_field('section_content', 'option') ?>    
+            <div class="swiper-cta">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <?php while( have_rows( 'diensten_cta', 'options' ) ): the_row(); ?>
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h1 class="display"><?php the_sub_field('content') ?></h1>
+                        </div>
+                    </div>
+                    <?php endwhile; ?>
+                </div>
+            </div>  
         </div>
     </div>
 </div>

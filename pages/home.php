@@ -74,7 +74,7 @@
 
     <div class="diensten-mobiel__inner">
         <div class="diensten-mobiel__inner--heading">
-            <h1>Onze Diensten</h1>
+            <h1>Onze diensten</h1>
         </div>
 
         <div class="swiper-diensten">

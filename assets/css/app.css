@@ -439,7 +439,7 @@ body.page-template-contact .contactinfo {
     max-width: 1200px;
     margin: auto; }
     body.page-template-contact .contactinfo__inner h1 {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       text-align: center; }
     body.page-template-contact .contactinfo__inner--content {
       display: grid;
@@ -475,8 +475,8 @@ body.page-template-contact .contactinfo {
 
 body.page-template-contact .contactform {
   z-index: 0;
-  margin: -210px 0;
-  padding: 300px 40px 200px;
+  margin: -210px 0 0;
+  padding: 300px 40px 150px;
   position: relative; }
   @media (max-width: 1024px) {
     body.page-template-contact .contactform {
@@ -493,16 +493,16 @@ body.page-template-contact .contactform {
     bottom: 0;
     left: 0;
     right: 0;
-    -webkit-clip-path: polygon(0 150px, 100% 0, 100% calc(100% - 150px), 0% 100%);
-            clip-path: polygon(0 150px, 100% 0, 100% calc(100% - 150px), 0% 100%); }
+    -webkit-clip-path: polygon(0 150px, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 150px, 100% 0, 100% 100%, 0% 100%); }
     @media (max-width: 1024px) {
       body.page-template-contact .contactform::after {
-        -webkit-clip-path: polygon(0 100px, 100% 0, 100% calc(100% - 100px), 0% 100%);
-                clip-path: polygon(0 100px, 100% 0, 100% calc(100% - 100px), 0% 100%); } }
+        -webkit-clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
+                clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%); } }
     @media (max-width: 767px) {
       body.page-template-contact .contactform::after {
-        -webkit-clip-path: polygon(0 50px, 100% 0, 100% calc(100% - 50px), 0% 100%);
-                clip-path: polygon(0 50px, 100% 0, 100% calc(100% - 50px), 0% 100%); } }
+        -webkit-clip-path: polygon(0 50px, 100% 0, 100% 100%, 0% 100%);
+                clip-path: polygon(0 50px, 100% 0, 100% 100%, 0% 100%); } }
   body.page-template-contact .contactform__inner {
     max-width: 700px;
     margin: auto; }
@@ -540,7 +540,7 @@ body.page-template-contact .contactform {
         body.page-template-contact .contactform__inner--content form input[type="submit"] {
           color: #fff;
           background-color: #1579C7;
-          width: 50%;
+          width: 180px;
           font-weight: 500;
           text-transform: uppercase;
           transition: background-color 0.3s ease-in-out;
@@ -553,45 +553,30 @@ body.page-template-contact .contactform {
           font-weight: 800; }
         body.page-template-contact .contactform__inner--content form .full-width {
           grid-column: 1 / 3; }
+        body.page-template-contact .contactform__inner--content form .wpcf7-response-output {
+          margin: 0;
+          height: 44px;
+          grid-column: 1 / 3; }
+      body.page-template-contact .contactform__inner--content form.invalid .wpcf7-response-output {
+        display: flex;
+        align-items: center;
+        border-color: red; }
+      body.page-template-contact .contactform__inner--content form.sent .wpcf7-response-output {
+        display: flex;
+        align-items: center;
+        border-color: green; }
+      body.page-template-contact .contactform__inner--content form.failed .wpcf7-response-output {
+        display: flex;
+        align-items: center;
+        border-color: red; }
 
-body.page-template-contact .cta-bottom {
+body.page-template-contact .google-maps {
   z-index: 1;
-  position: relative;
-  padding: 300px 40px 200px;
-  color: #fff; }
-  @media (max-width: 1024px) {
-    body.page-template-contact .cta-bottom {
-      padding: 150px 40px 100px; } }
-  @media (max-width: 767px) {
-    body.page-template-contact .cta-bottom {
-      padding: 150px 20px 100px; } }
-  body.page-template-contact .cta-bottom::after {
-    z-index: -1;
-    content: '';
-    background-color: #222429;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    -webkit-clip-path: polygon(0 150px, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(0 150px, 100% 0%, 100% 100%, 0% 100%); }
-    @media (max-width: 1024px) {
-      body.page-template-contact .cta-bottom::after {
-        -webkit-clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%);
-                clip-path: polygon(0 100px, 100% 0%, 100% 100%, 0% 100%); } }
-    @media (max-width: 767px) {
-      body.page-template-contact .cta-bottom::after {
-        -webkit-clip-path: polygon(0 50px, 100% 0%, 100% 100%, 0% 100%);
-                clip-path: polygon(0 50px, 100% 0%, 100% 100%, 0% 100%); } }
-  body.page-template-contact .cta-bottom__inner {
-    margin: auto;
-    max-width: 950px;
-    text-align: center; }
-    body.page-template-contact .cta-bottom__inner--content {
-      display: flex;
-      flex-flow: column;
-      gap: 10px; }
+  position: relative; }
+  body.page-template-contact .google-maps .gmaps-frame {
+    z-index: 1;
+    width: 100%;
+    height: 800px; }
 
 body.page-template-diensten .hero {
   padding: 100px 40px 0;
@@ -1987,14 +1972,14 @@ body.single-diensten .FAQ {
 
 body.single-diensten .cta-bottom {
   position: relative;
-  padding: 300px 0 200px;
+  padding: 250px 0 150px;
   color: #fff; }
   @media (max-width: 1024px) {
     body.single-diensten .cta-bottom {
-      padding: 200px 40px 150px; } }
+      padding: 150px 40px 100px; } }
   @media (max-width: 767px) {
     body.single-diensten .cta-bottom {
-      padding: 150px 20px 150px; } }
+      padding: 150px 20px 100px; } }
   body.single-diensten .cta-bottom::after {
     z-index: -1;
     content: '';
@@ -2016,12 +2001,25 @@ body.single-diensten .cta-bottom {
                 clip-path: polygon(0 50px, 100% 0%, 100% 100%, 0% 100%); } }
   body.single-diensten .cta-bottom__inner {
     margin: auto;
-    max-width: 950px;
+    max-width: 1200px;
     text-align: center; }
     body.single-diensten .cta-bottom__inner--content {
       display: flex;
       flex-flow: column;
       gap: 10px; }
+      body.single-diensten .cta-bottom__inner--content .swiper-cta {
+        margin: 0;
+        position: relative; }
+      body.single-diensten .cta-bottom__inner--content .swiper-slide .slide-content {
+        opacity: 0;
+        display: block;
+        width: 100%;
+        -o-object-fit: contain;
+           object-fit: contain; }
+      body.single-diensten .cta-bottom__inner--content .swiper-slide-active .slide-content {
+        opacity: 1; }
+        body.single-diensten .cta-bottom__inner--content .swiper-slide-active .slide-content a {
+          color: white; }
 
 body.page-template-wmitw .hero {
   padding: 100px 40px 0;
