@@ -469,6 +469,9 @@ body.page-template-contact .contactinfo {
             body.page-template-contact .contactinfo__inner--content .left .contactgegevens .icon img {
               max-height: 50px; }
       body.page-template-contact .contactinfo__inner--content .right {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
         width: 100%; }
         body.page-template-contact .contactinfo__inner--content .right p {
           margin-top: 0; }

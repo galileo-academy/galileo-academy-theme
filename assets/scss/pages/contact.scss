@@ -129,6 +129,9 @@ body.page-template-contact {
                 }
 
                 .right {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: center;
                     width: 100%;
 
                     p {
